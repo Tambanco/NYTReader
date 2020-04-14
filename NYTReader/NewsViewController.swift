@@ -12,6 +12,8 @@ class NewsViewController: UITableViewController {
 
     let itemArray = ["news1", "news2", "news3"]
     
+    let dataURL = "http://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,7 @@ class NewsViewController: UITableViewController {
         
         cell.textLabel?.text = itemArray[indexPath.row]
         
+        print(dataURL)
         return cell
     }
 }

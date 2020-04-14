@@ -13,7 +13,7 @@ class WebViewController: UIViewController, WKUIDelegate {
    override func viewDidLoad() {
       super.viewDidLoad()
     
-      let myURL = URL(string:"https://www.apple.com/ios/app-store/")
+      let myURL = URL(string:"https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg")
       let myRequest = URLRequest(url: myURL!)
       webView.load(myRequest)
    }

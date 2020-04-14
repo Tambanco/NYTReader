@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D50D9E2308FF94053E1854F /* Pods_NYTReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */; };
 		56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A40F244349FB00D015E4 /* AppDelegate.swift */; };
 		56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A411244349FB00D015E4 /* SceneDelegate.swift */; };
 		56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A413244349FB00D015E4 /* NewsViewController.swift */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13991361BBB651990B3BA5AD /* Pods-NYTReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTReader.release.xcconfig"; path = "Target Support Files/Pods-NYTReader/Pods-NYTReader.release.xcconfig"; sourceTree = "<group>"; };
+		1C429DA7CDF5882B6F195692 /* Pods-NYTReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTReader.debug.xcconfig"; path = "Target Support Files/Pods-NYTReader/Pods-NYTReader.debug.xcconfig"; sourceTree = "<group>"; };
 		56B8A40C244349FB00D015E4 /* NYTReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B8A40F244349FB00D015E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B8A411244349FB00D015E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		56B8A41D24434A0000D015E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BBAA75244372BF00407140 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		56BBAA7B2443AE3F00407140 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D50D9E2308FF94053E1854F /* Pods_NYTReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AD3A3920DAA576247E7C5A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56B8A403244349FB00D015E4 = {
 			isa = PBXGroup;
 			children = (
 				56B8A40E244349FB00D015E4 /* NYTReader */,
 				56B8A40D244349FB00D015E4 /* Products */,
+				5D9AD8A5BB3C22704007776B /* Pods */,
+				4AD3A3920DAA576247E7C5A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +120,16 @@
 			path = "Supported files";
 			sourceTree = "<group>";
 		};
+		5D9AD8A5BB3C22704007776B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C429DA7CDF5882B6F195692 /* Pods-NYTReader.debug.xcconfig */,
+				13991361BBB651990B3BA5AD /* Pods-NYTReader.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56B8A42024434A0000D015E4 /* Build configuration list for PBXNativeTarget "NYTReader" */;
 			buildPhases = (
+				60B943E6794721E6A34731A6 /* [CP] Check Pods Manifest.lock */,
 				56B8A408244349FB00D015E4 /* Sources */,
 				56B8A409244349FB00D015E4 /* Frameworks */,
 				56B8A40A244349FB00D015E4 /* Resources */,
+				524BE9776CE29E595E38F0EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +197,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		524BE9776CE29E595E38F0EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYTReader/Pods-NYTReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NYTReader/Pods-NYTReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYTReader/Pods-NYTReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60B943E6794721E6A34731A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYTReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56B8A408244349FB00D015E4 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		56B8A42124434A0000D015E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C429DA7CDF5882B6F195692 /* Pods-NYTReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -340,6 +410,7 @@
 		};
 		56B8A42224434A0000D015E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13991361BBB651990B3BA5AD /* Pods-NYTReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
