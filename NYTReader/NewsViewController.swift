@@ -13,7 +13,7 @@ import SwiftyJSON
 class NewsViewController: UITableViewController {
     
     var itemArray = [DataModel]()
-        
+    
     let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class NewsViewController: UITableViewController {
     func getData(url: String){
         Alamofire.request(url, method: .get).responseJSON { response in
             if response.result.isSuccess {
-                let dataJSON:JSON = JSON(response.result.value!)
+                let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
                 self.updateData(json: dataJSON)
 
@@ -44,10 +44,20 @@ class NewsViewController: UITableViewController {
     
     //MARK: - JSON Parsing
     
-    func updateData(json: JSON) {
-        if let dataResult = json["results"][0]["title"].string{
-            print(dataResult)
-            itemArray.append(dataResult)
+    func updateData(json: JSON)
+    {
+        if json["results"].exists()
+        {
+            let rawItems = json["results"].arrayValue
+            
+            if rawItems.count > 0 {
+                rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
+                                                                url: $0["url"].string ?? "",
+                                                                imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
+                print(rawItems.count)
+                print(itemArray)
+            }
+            tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -59,12 +69,12 @@ class NewsViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
-
-        let a = itemArray[indexPath.row]
-
-        cell.textLabel?.text = a.title
-
+        
+        
+        
+        cell.textLabel?.text = itemArray[0].title
+        
+        
         return cell
     }
 }
-
