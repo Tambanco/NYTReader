@@ -8,8 +8,9 @@
 
 import UIKit
 
-class Data{
+class DataModel{
     
-    let title: String = ""
-
+    var title: String = ""
+    var url: String = ""
+    var imageURL = ""
 }

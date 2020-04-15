@@ -16,7 +16,6 @@
 		56B8A41924434A0000D015E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41824434A0000D015E4 /* Assets.xcassets */; };
 		56B8A41C24434A0000D015E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */; };
 		56BBAA76244372BF00407140 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBAA75244372BF00407140 /* WebViewController.swift */; };
-		56BBAA7C2443AE3F00407140 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBAA7B2443AE3F00407140 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		56B8A41B24434A0000D015E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B8A41D24434A0000D015E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BBAA75244372BF00407140 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		56BBAA7B2443AE3F00407140 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,7 +99,6 @@
 		56BBAA782443ABC500407140 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				56BBAA7B2443AE3F00407140 /* DataManager.swift */,
 				56182AF72445EE790077ACCA /* DataModel.swift */,
 			);
 			path = Models;
@@ -249,7 +246,6 @@
 			files = (
 				56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */,
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
-				56BBAA7C2443AE3F00407140 /* DataManager.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* DataModel.swift in Sources */,
