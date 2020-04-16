@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xKR-dh-JRm" kind="show" id="JIL-Ar-rEe"/>
+                                    <segue destination="xKR-dh-JRm" kind="show" identifier="goToWebVersion" id="ftM-kh-VSH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

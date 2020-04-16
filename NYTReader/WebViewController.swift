@@ -8,18 +8,25 @@
 
 import UIKit
 import WebKit
+
 class WebViewController: UIViewController, WKUIDelegate {
+    
+    var passingURL = ""
+    
    var webView: WKWebView!
+    
+    
    override func viewDidLoad() {
       super.viewDidLoad()
     
-      let myURL = URL(string:"https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg")
+    
+    let myURL = URL(string: "\(passingURL)")
       let myRequest = URLRequest(url: myURL!)
       webView.load(myRequest)
    }
    override func loadView() {
       let webConfiguration = WKWebViewConfiguration()
-      webView = WKWebView(frame: .zero, configuration: webConfiguration)
+    webView = WKWebView(frame: .zero, configuration: webConfiguration)
       webView.uiDelegate = self
       view = webView
    }

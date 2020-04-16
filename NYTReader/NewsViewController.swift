@@ -55,6 +55,8 @@ class NewsViewController: UITableViewController {
                                                                 url: $0["url"].string ?? "",
                                                                 imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
             }
+            
+            print(itemArray)
             tableView.reloadData()
         }else{
             print("Дата недоступна")
@@ -69,7 +71,20 @@ class NewsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row].title
-        
+    
         return cell
+    }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        //Pass the indexPath as sender
+        self.performSegue(withIdentifier: "goToWebVersion", sender: indexPath)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWebVersion" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let webVersionVC = segue.destination as! WebViewController
+                webVersionVC.passingURL = itemArray[indexPath.row].url
+            
+            }
+        }
     }
 }
