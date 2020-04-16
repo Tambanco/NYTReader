@@ -54,8 +54,6 @@ class NewsViewController: UITableViewController {
                 rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
                                                                 url: $0["url"].string ?? "",
                                                                 imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
-                print(rawItems.count)
-                print(itemArray)
             }
             tableView.reloadData()
         }else{
@@ -70,10 +68,7 @@ class NewsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         
-        
-        
-        cell.textLabel?.text = itemArray[0].title
-        
+        cell.textLabel?.text = itemArray[indexPath.row].title
         
         return cell
     }
