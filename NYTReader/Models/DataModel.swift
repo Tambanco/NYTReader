@@ -12,5 +12,5 @@ struct DataModel{
     
     var title: String = ""
     var url: String = ""
-    var imageURL = ""
+    var imageURL: String = ""
 }

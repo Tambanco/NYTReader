@@ -19,8 +19,8 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 250
+//        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 70
         
         getData(url: dataURL)
         
@@ -56,7 +56,6 @@ class NewsViewController: UITableViewController {
                                                                 imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
             }
             
-            print(itemArray)
             tableView.reloadData()
         }else{
             print("Дата недоступна")
@@ -71,6 +70,8 @@ class NewsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row].title
+//        cell.imageView = itemArray[indexPath.row].imageURL
+        
     
         return cell
     }
