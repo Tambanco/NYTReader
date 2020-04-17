@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class NewsViewController: UITableViewController {
     
@@ -16,11 +17,14 @@ class NewsViewController: UITableViewController {
     
     let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     
+    @IBOutlet weak var cellImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.rowHeight = UITableView.automaticDimension
+        //        tableView.rowHeight = UITableView.automaticDimension
         tableView.rowHeight = 70
+        
         
         getData(url: dataURL)
         
@@ -34,7 +38,7 @@ class NewsViewController: UITableViewController {
                 let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
                 self.updateData(json: dataJSON)
-
+                
             }else{
                 print("Error: \(String(describing: response.result.error))")
                 print("Проблемы с соединием")
@@ -70,9 +74,10 @@ class NewsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row].title
-//        cell.imageView = itemArray[indexPath.row].imageURL
+        cell.imageView?.image = nil
+        cell.imageView?.kf.setImage(with: URL(string: itemArray[indexPath.row].imageURL))
+
         
-    
         return cell
     }
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
@@ -84,7 +89,7 @@ class NewsViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let webVersionVC = segue.destination as! WebViewController
                 webVersionVC.passingURL = itemArray[indexPath.row].url
-            
+                
             }
         }
     }
