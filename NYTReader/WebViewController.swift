@@ -30,4 +30,8 @@ class WebViewController: UIViewController, WKUIDelegate {
       webView.uiDelegate = self
       view = webView
    }
+    @IBAction func reloadPage(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
 }
