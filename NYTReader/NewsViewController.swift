@@ -22,9 +22,8 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        tableView.rowHeight = UITableView.automaticDimension
-        tableView.rowHeight = 70
-        
+        tableView.rowHeight = 90
+//        tableView.rowHeight = UITableView.automaticDimension
         
         getData(url: dataURL)
         
@@ -38,7 +37,7 @@ class NewsViewController: UITableViewController {
                 let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
                 self.updateData(json: dataJSON)
-                
+//                self.tableView.reloadData()
             }else{
                 print("Error: \(String(describing: response.result.error))")
                 print("Проблемы с соединием")
@@ -60,7 +59,7 @@ class NewsViewController: UITableViewController {
                                                                 imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
             }
             
-            tableView.reloadData()
+             tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -74,9 +73,11 @@ class NewsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         
         cell.textLabel?.text = itemArray[indexPath.row].title
-        cell.imageView?.image = nil
+        cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
+        cell.textLabel?.lineBreakMode = .byWordWrapping
+        cell.textLabel?.numberOfLines = 3
         cell.imageView?.kf.setImage(with: URL(string: itemArray[indexPath.row].imageURL))
-
+        
         
         return cell
     }
