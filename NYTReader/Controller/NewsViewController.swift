@@ -14,7 +14,6 @@ import Kingfisher
 class NewsViewController: SwipeTableViewController {
     
     var itemArray = [DataModel]()
-    
     let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     
     @IBOutlet weak var cellImageView: UIImageView!
@@ -22,8 +21,10 @@ class NewsViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
 
     }
+ 
     override func viewWillAppear(_ animated: Bool) {
 //        tableView.rowHeight = 76
         getData(url: dataURL)
@@ -92,5 +93,12 @@ class NewsViewController: SwipeTableViewController {
                 
             }
         }
+    }
+    @objc func refresh(sender:AnyObject)
+    {
+       getData(url: dataURL)
+
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
 }
