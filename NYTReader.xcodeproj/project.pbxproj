@@ -16,6 +16,7 @@
 		56B8A41924434A0000D015E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41824434A0000D015E4 /* Assets.xcassets */; };
 		56B8A41C24434A0000D015E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */; };
 		56BBAA76244372BF00407140 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBAA75244372BF00407140 /* WebViewController.swift */; };
+		56C00F25245588D000FA9EAF /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		56B8A41B24434A0000D015E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B8A41D24434A0000D015E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BBAA75244372BF00407140 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,8 +82,6 @@
 				56BBAA792443ABD600407140 /* View */,
 				56BBAA782443ABC500407140 /* Models */,
 				56BBAA772443ABAD00407140 /* Controller */,
-				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
-				56BBAA75244372BF00407140 /* WebViewController.swift */,
 				56BBAA7A2443AC4500407140 /* Supported files */,
 				56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */,
 				56B8A41D24434A0000D015E4 /* Info.plist */,
@@ -92,6 +92,9 @@
 		56BBAA772443ABAD00407140 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */,
+				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
+				56BBAA75244372BF00407140 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
+				56C00F25245588D000FA9EAF /* SwipeTableViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

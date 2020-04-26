@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class NewsViewController: UITableViewController {
+class NewsViewController: SwipeTableViewController {
     
     var itemArray = [DataModel]()
     
@@ -22,22 +22,22 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 90
-//        tableView.rowHeight = UITableView.automaticDimension
-        
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+//        tableView.rowHeight = 76
         getData(url: dataURL)
-        
     }
     
     //MARK: - Networking
     
     func getData(url: String){
         Alamofire.request(url, method: .get).responseJSON { response in
-            if response.result.isSuccess {
+            if response.result.isSuccess {  
                 let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
                 self.updateData(json: dataJSON)
-//                self.tableView.reloadData()
+                self.tableView.reloadData()
             }else{
                 print("Error: \(String(describing: response.result.error))")
                 print("Проблемы с соединием")
@@ -56,10 +56,9 @@ class NewsViewController: UITableViewController {
             if rawItems.count > 0 {
                 rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
                                                                 url: $0["url"].string ?? "",
-                                                                imageURL: $0["multimedia"].arrayValue[0]["url"].string ?? "") ) })
+                                                                imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? "") ) })
             }
-            
-             tableView.reloadData()
+//             tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -70,14 +69,14 @@ class NewsViewController: UITableViewController {
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
-        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 3
+        cell.textLabel?.numberOfLines = 2
         cell.imageView?.kf.setImage(with: URL(string: itemArray[indexPath.row].imageURL))
-        
         
         return cell
     }
