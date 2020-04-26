@@ -10,7 +10,7 @@
         <!--NYTReader-->
         <scene sceneID="Y0c-ol-CuU">
             <objects>
-                <tableViewController id="nfV-RT-Tky" customClass="NewsViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="nfV-RT-Tky" customClass="NewsViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gzQ-n6-qgH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,14 +33,20 @@
                             <outlet property="delegate" destination="nfV-RT-Tky" id="wNH-2a-xoC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE"/>
+                    <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="open-menu" id="ZHK-h5-Y8u">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="nfV-RT-Tky" id="b1k-0h-MnY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fBk-it-Q5j">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
                             <fragment content="Refreshing">
                                 <attributes>
-                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="NSColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <font key="NSFont" metaFont="label" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
@@ -99,4 +105,7 @@
             <point key="canvasLocation" x="886.95652173913049" y="85.714285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="open-menu" width="32" height="32"/>
+    </resources>
 </document>
