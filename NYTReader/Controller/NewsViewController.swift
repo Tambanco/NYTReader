@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Kingfisher
+import SideMenuSwift
 
 class NewsViewController: SwipeTableViewController {
     
@@ -98,10 +99,11 @@ class NewsViewController: SwipeTableViewController {
     {
        getData(url: dataURL)
 
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
-        print("Menu button pressed")
+        self.sideMenuController?.revealMenu()
+        
     }
 }
