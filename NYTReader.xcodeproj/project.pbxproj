@@ -10,7 +10,6 @@
 		2D50D9E2308FF94053E1854F /* Pods_NYTReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */; };
 		56182AF82445EE790077ACCA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56182AF72445EE790077ACCA /* DataModel.swift */; };
 		565A2C6324575A0E008FA0E5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A2C6224575A0E008FA0E5 /* MenuViewController.swift */; };
-		565A2C66245762CE008FA0E5 /* MarkedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A2C65245762CE008FA0E5 /* MarkedViewController.swift */; };
 		56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A40F244349FB00D015E4 /* AppDelegate.swift */; };
 		56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A411244349FB00D015E4 /* SceneDelegate.swift */; };
 		56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A413244349FB00D015E4 /* NewsViewController.swift */; };
@@ -26,7 +25,6 @@
 		1C429DA7CDF5882B6F195692 /* Pods-NYTReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTReader.debug.xcconfig"; path = "Target Support Files/Pods-NYTReader/Pods-NYTReader.debug.xcconfig"; sourceTree = "<group>"; };
 		56182AF72445EE790077ACCA /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		565A2C6224575A0E008FA0E5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		565A2C65245762CE008FA0E5 /* MarkedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkedViewController.swift; sourceTree = "<group>"; };
 		56B8A40C244349FB00D015E4 /* NYTReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B8A40F244349FB00D015E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B8A411244349FB00D015E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
 				56BBAA75244372BF00407140 /* WebViewController.swift */,
 				565A2C6224575A0E008FA0E5 /* MenuViewController.swift */,
-				565A2C65245762CE008FA0E5 /* MarkedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				565A2C66245762CE008FA0E5 /* MarkedViewController.swift in Sources */,
 				56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */,
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
