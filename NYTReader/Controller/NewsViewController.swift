@@ -12,22 +12,33 @@ import SwiftyJSON
 import Kingfisher
 import SideMenuSwift
 
-class NewsViewController: SwipeTableViewController {
+class NewsViewController: UITableViewController {
     
     var itemArray = [DataModel]()
     
-    let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
+    let bgColor = UserDefaults.standard.string(forKey: "background_color_hex") ?? "#FFFFFF"
     
+   
+    let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     @IBOutlet weak var cellImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(hexString: bgColor)
+        navigationController?.navigationBar.backgroundColor = UIColor(hexString: bgColor)
+        
+        tableView.rowHeight = 80
+
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
+        
+        
 
     }
  
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         getData(url: dataURL)
     }
     
@@ -71,13 +82,13 @@ class NewsViewController: SwipeTableViewController {
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
 
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.numberOfLines = 2
+        cell.textLabel?.numberOfLines = 3
         cell.imageView?.kf.setImage(with: URL(string: itemArray[indexPath.row].imageURL))
         
         return cell
@@ -99,11 +110,14 @@ class NewsViewController: SwipeTableViewController {
     {
        getData(url: dataURL)
 
-//        self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         self.sideMenuController?.revealMenu()
         
+    }
+    @IBAction func updateView(_ sender: UIBarButtonItem) {
+        
+        view.backgroundColor = UIColor(hexString: bgColor)
     }
 }

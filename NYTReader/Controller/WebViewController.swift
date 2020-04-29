@@ -18,7 +18,7 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let myURL = URL(string: "\(passingURL)")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)

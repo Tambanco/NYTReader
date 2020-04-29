@@ -16,8 +16,8 @@
 		56B8A417244349FB00D015E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A415244349FB00D015E4 /* Main.storyboard */; };
 		56B8A41924434A0000D015E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41824434A0000D015E4 /* Assets.xcassets */; };
 		56B8A41C24434A0000D015E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */; };
+		56B9ACDB245A39780067F5FE /* HexToUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B9ACDA245A39780067F5FE /* HexToUIColor.swift */; };
 		56BBAA76244372BF00407140 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBAA75244372BF00407140 /* WebViewController.swift */; };
-		56C00F25245588D000FA9EAF /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		56B8A41824434A0000D015E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56B8A41B24434A0000D015E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B8A41D24434A0000D015E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B9ACDA245A39780067F5FE /* HexToUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToUIColor.swift; sourceTree = "<group>"; };
 		56BBAA75244372BF00407140 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,10 +94,10 @@
 		56BBAA772443ABAD00407140 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				56C00F24245588D000FA9EAF /* SwipeTableViewController.swift */,
+				565A2C6224575A0E008FA0E5 /* MenuViewController.swift */,
 				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
 				56BBAA75244372BF00407140 /* WebViewController.swift */,
-				565A2C6224575A0E008FA0E5 /* MenuViewController.swift */,
+				56B9ACDA245A39780067F5FE /* HexToUIColor.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,9 +252,9 @@
 			files = (
 				56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */,
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
+				56B9ACDB245A39780067F5FE /* HexToUIColor.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
-				56C00F25245588D000FA9EAF /* SwipeTableViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* DataModel.swift in Sources */,
 				565A2C6324575A0E008FA0E5 /* MenuViewController.swift in Sources */,
 			);
