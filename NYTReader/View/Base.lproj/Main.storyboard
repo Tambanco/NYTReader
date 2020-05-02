@@ -34,39 +34,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7I-UT-yJG">
-                                <rect key="frame" x="364" y="133" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="darkModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="SRs-zw-UDP"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Scheme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-nR-p9l">
-                                <rect key="frame" x="153" y="138" width="120" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fQL-fR-6Ec">
+                                <rect key="frame" x="274" y="133" width="120" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-iK-aLW">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="whiteModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="Ehd-lF-5fV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7I-UT-yJG">
+                                        <rect key="frame" x="45" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="darkModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="SRs-zw-UDP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2o-ed-7Z6">
+                                        <rect key="frame" x="90" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="darkModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="uYv-lW-cX6"/>
+                                            <action selector="oceanModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="cCE-0o-8qc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Scheme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-nR-p9l">
+                                <rect key="frame" x="130" y="138" width="119.5" height="20"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwF-iK-aLW">
-                                <rect key="frame" x="314" y="133" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="whiteModeButtonPressed:" destination="WCa-aS-Egi" eventType="touchUpInside" id="Ehd-lF-5fV"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IvA-pV-Ey1" firstAttribute="bottom" secondItem="jzC-nR-p9l" secondAttribute="bottom" constant="704" id="1oa-xv-szQ"/>
+                            <constraint firstItem="jzC-nR-p9l" firstAttribute="leading" secondItem="IvA-pV-Ey1" secondAttribute="leading" constant="130" id="43U-Nk-B1Y"/>
+                            <constraint firstItem="IvA-pV-Ey1" firstAttribute="bottom" secondItem="fQL-fR-6Ec" secondAttribute="bottom" constant="699" id="Xfc-WT-8K5"/>
+                            <constraint firstItem="fQL-fR-6Ec" firstAttribute="top" secondItem="IvA-pV-Ey1" secondAttribute="top" constant="45" id="mmd-gH-2WB"/>
+                            <constraint firstItem="jzC-nR-p9l" firstAttribute="top" secondItem="IvA-pV-Ey1" secondAttribute="top" constant="50" id="pQ8-oz-HVQ"/>
+                            <constraint firstItem="fQL-fR-6Ec" firstAttribute="leading" secondItem="jzC-nR-p9l" secondAttribute="trailing" constant="24.5" id="phz-Ib-Ngv"/>
+                            <constraint firstItem="IvA-pV-Ey1" firstAttribute="trailing" secondItem="fQL-fR-6Ec" secondAttribute="trailing" constant="20" id="vuA-mb-whE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IvA-pV-Ey1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="l9b-VF-4rS"/>
                     <connections>
                         <outlet property="darkModeButton" destination="J7I-UT-yJG" id="65m-Bc-u3q"/>
+                        <outlet property="oceanModeButton" destination="z2o-ed-7Z6" id="dP4-d5-gOa"/>
                         <outlet property="textColorScheme" destination="jzC-nR-p9l" id="9YJ-6T-fOI"/>
                         <outlet property="whiteModeButton" destination="wwF-iK-aLW" id="mCe-31-M99"/>
                     </connections>
@@ -102,20 +125,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="open-menu" id="ZHK-h5-Y8u">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="ZHK-h5-Y8u">
                             <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             <connections>
                                 <action selector="menuButtonPressed:" destination="nfV-RT-Tky" id="b1k-0h-MnY"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="kde-jv-gCZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FJR-BE-DSi">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <connections>
-                                <action selector="updateView:" destination="nfV-RT-Tky" id="tsC-Je-g1N"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -126,7 +139,7 @@
                             <fragment content="Refreshing">
                                 <attributes>
                                     <color key="NSColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" metaFont="controlContent" size="11"/>
+                                    <font key="NSFont" metaFont="message" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -206,6 +219,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="open-menu" width="32" height="32"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
     </resources>
 </document>

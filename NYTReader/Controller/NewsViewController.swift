@@ -68,10 +68,11 @@ class NewsViewController: UITableViewController {
             
             if rawItems.count > 0 {
                 rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
-                                                                url: $0["url"].string ?? "",
-                                                                imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? "") ) })
+                                                                url: $0["url"].string ?? ""
+//                    ,
+//                                                                imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? ""
+                ) ) })
             }
-//             tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -115,9 +116,5 @@ class NewsViewController: UITableViewController {
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         self.sideMenuController?.revealMenu()
         
-    }
-    @IBAction func updateView(_ sender: UIBarButtonItem) {
-        
-        view.backgroundColor = UIColor(hexString: bgColor)
     }
 }
