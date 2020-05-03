@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thI-w1-Wpo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NZs-kc-KO2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,40 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Side Menu Controller-->
-        <scene sceneID="Vxe-A8-X97">
-            <objects>
-                <viewController id="thI-w1-Wpo" customClass="SideMenuController" customModule="SideMenuSwift" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b1t-1h-oSv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="h8k-gA-sgr"/>
-                    </view>
-                    <connections>
-                        <segue destination="NZs-kc-KO2" kind="custom" identifier="SideMenu.Content" customClass="SideMenuSegue" customModule="SideMenuSwift" id="w2W-ei-H9Y"/>
-                        <segue destination="1kv-bQ-Sdv" kind="custom" identifier="SideMenu.Menu" customClass="SideMenuSegue" customModule="SideMenuSwift" id="jVk-ar-3wZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QgA-qP-HwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-191" y="488"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="vPe-e0-dKs">
-            <objects>
-                <viewController id="WCa-aS-Egi" customClass="MenuViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xt2-kA-1e3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="IvA-pV-Ey1"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="l9b-VF-4rS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gA7-FM-gVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1667" y="882"/>
-        </scene>
         <!--NYTReader-->
         <scene sceneID="Y0c-ol-CuU">
             <objects>
@@ -50,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="r3e-pq-qgt">
+                            <tableViewCell clipsSubviews="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NewsCell" id="r3e-pq-qgt">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3e-pq-qgt" id="8A0-Do-YDV">
@@ -67,14 +33,7 @@
                             <outlet property="delegate" destination="nfV-RT-Tky" id="wNH-2a-xoC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="text.justify" catalog="system" id="ZHK-h5-Y8u">
-                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            <connections>
-                                <action selector="menuButtonPressed:" destination="nfV-RT-Tky" id="b1k-0h-MnY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fBk-it-Q5j">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,7 +41,7 @@
                             <fragment content="Refreshing">
                                 <attributes>
                                     <color key="NSColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" metaFont="message" size="11"/>
+                                    <font key="NSFont" metaFont="label" size="11"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -136,29 +95,5 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="85.714285714285708"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zb3-eH-nBr">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1kv-bQ-Sdv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KqP-5j-Wyi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="WCa-aS-Egi" kind="relationship" relationship="rootViewController" id="XDb-EZ-vYA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHX-qi-irk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="887" y="882"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="text.justify" catalog="system" width="128" height="100"/>
-    </resources>
 </document>

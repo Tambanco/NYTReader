@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Kingfisher
-import SideMenuSwift
 
 class NewsViewController: UITableViewController {
     
@@ -25,9 +24,9 @@ class NewsViewController: UITableViewController {
         
         tableView.rowHeight = 80
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-
+        
     }
- 
+    
     override func viewWillAppear(_ animated: Bool) {
         getData(url: dataURL)
     }
@@ -39,6 +38,7 @@ class NewsViewController: UITableViewController {
             if response.result.isSuccess {  
                 let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
+                print(dataJSON)
                 self.updateData(json: dataJSON)
                 self.tableView.reloadData()
             }else{
@@ -55,13 +55,11 @@ class NewsViewController: UITableViewController {
         if json["results"].exists()
         {
             let rawItems = json["results"].arrayValue
-            
+            print(rawItems.count)
             if rawItems.count > 0 {
-                rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
-                                                                url: $0["url"].string ?? "",
-                                                                imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? "") ) })
+                rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "", url: $0["url"].string ?? "", imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? "") ) })
+                print(rawItems)
             }
-//             tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -69,12 +67,13 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        print(itemArray.count)
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        let cell = super.tableView(tableView, cellForRowAt: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
+        
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.textLabel?.lineBreakMode = .byWordWrapping
@@ -98,13 +97,9 @@ class NewsViewController: UITableViewController {
     }
     @objc func refresh(sender:AnyObject)
     {
-       getData(url: dataURL)
-
-//        self.tableView.reloadData()
+        getData(url: dataURL)
+        
         self.refreshControl?.endRefreshing()
     }
-    @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
-        self.sideMenuController?.revealMenu()
-        
-    }
+    
 }
