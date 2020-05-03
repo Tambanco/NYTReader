@@ -12,32 +12,27 @@ import SwiftyJSON
 import Kingfisher
 import SideMenuSwift
 
-class NewsViewController: UITableViewController {
+class NewsViewController: UITableViewController, setColorScheme{
     
     var itemArray = [DataModel]()
     
-    let bgColor = UserDefaults.standard.string(forKey: "background_color_hex") ?? "#FFFFFF"
+    //    let bgColor = UserDefaults.standard.string(forKey: "background_color_hex") ?? "#FFFFFF"
     
-   
     let dataURL = "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
+    
     @IBOutlet weak var cellImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(hexString: bgColor)
-        navigationController?.navigationBar.backgroundColor = UIColor(hexString: bgColor)
+        self.view.backgroundColor = SettingsViewController.sharedInstance.backgroundColor
         
         tableView.rowHeight = 80
-
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
-        
-
     }
- 
+    
     override func viewWillAppear(_ animated: Bool) {
-        
         
         getData(url: dataURL)
     }
@@ -69,8 +64,8 @@ class NewsViewController: UITableViewController {
             if rawItems.count > 0 {
                 rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "",
                                                                 url: $0["url"].string ?? ""
-//                    ,
-//                                                                imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? ""
+//                                        ,
+//                                                                                    imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? ""
                 ) ) })
             }
         }else{
@@ -85,7 +80,7 @@ class NewsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-
+        cell.backgroundColor = SettingsViewController.sharedInstance.backgroundColor
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.textLabel?.lineBreakMode = .byWordWrapping
@@ -109,12 +104,15 @@ class NewsViewController: UITableViewController {
     }
     @objc func refresh(sender:AnyObject)
     {
-       getData(url: dataURL)
-
+        getData(url: dataURL)
+        
         self.refreshControl?.endRefreshing()
     }
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         self.sideMenuController?.revealMenu()
-        
+
+    }
+    func colorSet(color: UIColor) {
+        view.backgroundColor = color
     }
 }
