@@ -12,7 +12,7 @@ import SwiftyJSON
 import Kingfisher
 import SideMenuSwift
 
-class NewsViewController: SwipeTableViewController {
+class NewsViewController: UITableViewController {
     
     var itemArray = [DataModel]()
     
@@ -23,6 +23,7 @@ class NewsViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = 80
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
 
     }
@@ -71,8 +72,8 @@ class NewsViewController: SwipeTableViewController {
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        let cell = super.tableView(tableView, cellForRowAt: indexPath)
 
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
