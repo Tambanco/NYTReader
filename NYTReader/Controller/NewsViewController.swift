@@ -23,6 +23,7 @@ class NewsViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = 80
+        
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
     }
@@ -38,9 +39,7 @@ class NewsViewController: UITableViewController {
             if response.result.isSuccess {  
                 let dataJSON = JSON(response.result.value!)
                 print("Есть соединение, дата загружена")
-                print(dataJSON)
                 self.updateData(json: dataJSON)
-                self.tableView.reloadData()
             }else{
                 print("Error: \(String(describing: response.result.error))")
                 print("Проблемы с соединием")
@@ -55,11 +54,13 @@ class NewsViewController: UITableViewController {
         if json["results"].exists()
         {
             let rawItems = json["results"].arrayValue
-            print(rawItems.count)
             if rawItems.count > 0 {
-                rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "", url: $0["url"].string ?? "", imageURL: $0["multimedia"].arrayValue[1]["url"].string ?? "") ) })
-                print(rawItems)
+                rawItems.forEach({ itemArray.append( DataModel( title: $0["title"].string ?? "issues with Title",
+                                                                url: $0["url"].string ?? "Issues with url",
+                                                                imageURL: $0["multimedia"][1]["url"].string ?? "Ussues with imageURL") ) })
             }
+            
+            tableView.reloadData()
         }else{
             print("Дата недоступна")
         }
@@ -68,7 +69,6 @@ class NewsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        print(itemArray.count)
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
