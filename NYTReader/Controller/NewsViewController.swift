@@ -23,7 +23,6 @@ class NewsViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = 80
-        
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
     }
