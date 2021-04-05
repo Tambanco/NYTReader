@@ -9,29 +9,30 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate {
-    
+class WebViewController: UIViewController, WKUIDelegate
+{
+    // MARK: - Properties
     var passingURL = ""
-    
     var webView: WKWebView!
     
-    
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
         let myURL = URL(string: "\(passingURL)")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
-        
     }
-    override func loadView() {
+    
+    override func loadView()
+    {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         view = webView
     }
-    @IBAction func reloadPage(_ sender: UIBarButtonItem) {
+    
+    @IBAction func reloadPage(_ sender: UIBarButtonItem)
+    {
         webView.reload()
     }
-    
 }

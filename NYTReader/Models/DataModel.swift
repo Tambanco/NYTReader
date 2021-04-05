@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct DataModel{
-    
-    var title: String = ""
-    var url: String = ""
-    var imageURL: String = ""
+struct DataModel
+{
+    var title: String       = ""
+    var url: String         = ""
+    var imageURL: String    = ""
 }
