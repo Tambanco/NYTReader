@@ -77,12 +77,19 @@ class NewsViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        
+        let processor = RoundCornerImageProcessor(cornerRadius: 10)
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
         cell.textLabel?.text = itemArray[indexPath.row].title
         cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.textLabel?.numberOfLines = 2
-        cell.imageView?.kf.setImage(with: URL(string: itemArray[indexPath.row].imageURL))
+        
+        cell.imageView?.kf.indicatorType = .activity
+        cell.imageView?.kf.setImage( with: URL(string: itemArray[indexPath.row].imageURL),
+                                     placeholder: UIImage(named: "placeholder"),
+                                     options: [.transition(.fade(0.2)), .processor(processor)] )
+        cell.imageView?.kf.indicatorType = .activity
         
         return cell
     }
