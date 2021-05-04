@@ -10,7 +10,9 @@ import UIKit
 
 class SectionsTableViewCell: UITableViewCell
 {
-
+    
+    @IBOutlet weak var sectionLabel: UILabel!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
@@ -21,7 +23,7 @@ class SectionsTableViewCell: UITableViewCell
     {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }
