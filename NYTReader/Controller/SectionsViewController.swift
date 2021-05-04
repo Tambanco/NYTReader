@@ -35,4 +35,21 @@ class SectionsViewController: UITableViewController
         cell.accessoryType = .disclosureIndicator
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        self.performSegue(withIdentifier: "goToArticles", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "goToArticles"
+        {
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let articleVC = segue.destination as! NewsViewController
+                articleVC.section = sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections))[indexPath.row]
+            }
+        }
+    }
 }
