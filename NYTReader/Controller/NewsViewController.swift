@@ -82,67 +82,10 @@ class NewsViewController: UITableViewController
     }
 }
 
-//MARK: - URL Builder
-extension NewsViewController
-{
-    func buildURL(basicURL: String, section: String, apiKey: String)
-    {
-        let urlForRequest = basicURL + section + ".json?" + "api-key=" + apiKey
-        getData(url: urlForRequest)
-        self.refreshControl?.endRefreshing()
-    }
-}
 
-// MARK: - Network manager
-extension NewsViewController
-    {
-        func getData(url: String)
-        {
-            Alamofire.request(url, method: .get).responseJSON { response in
-                if response.result.isSuccess
-                {
-                    let dataJSON = JSON(response.result.value!)
-                    print("Data has downloaded")
-                    self.updateData(json: dataJSON)
-                }
-                else
-                {
-                    print("Error: \(String(describing: response.result.error))")
-                    print("Connection problems")
-                }
-            }
-        }
-    }
 
-//MARK: - JSON Parser
-extension NewsViewController
-{
-    func updateData(json: JSON)
-    {
-        if json["results"].exists()
-        {
-            let rawItems = json["results"].arrayValue
-            if rawItems.count > 0
-            {
-                rawItems.forEach({ newsArray.append( Articles( title:      $0["title"].string ?? "issues with Title",
-                                                                url:        $0["url"].string ?? "Issues with url",
-                                                                imageURL:   $0["multimedia"][1]["url"].string ?? "Ussues with imageURL") ) })
-            }
-                tableView.reloadData()
-        }
-        else
-        {
-            print("Data not available")
-        }
-    }
-}
 
-// MARK: - Refresh controller
-extension NewsViewController
-{
-    @objc func refresh(sender:AnyObject)
-    {
-        getData(url: basicURL)
-        self.refreshControl?.endRefreshing()
-    }
-}
+
+
+
+

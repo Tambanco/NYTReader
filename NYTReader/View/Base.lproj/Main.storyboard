@@ -101,16 +101,44 @@
                     <view key="view" contentMode="scaleToFill" id="7Fb-LT-6vY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4g-xq-i4I">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progressViewStyle="bar" progress="0.5" id="4hl-GD-Qp7">
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="1.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.33333333329999998" green="0.63137254899999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j5K-lJ-3AR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d4g-xq-i4I" firstAttribute="leading" secondItem="j5K-lJ-3AR" secondAttribute="leading" id="77y-0L-9m5"/>
+                            <constraint firstItem="d4g-xq-i4I" firstAttribute="top" secondItem="j5K-lJ-3AR" secondAttribute="top" id="AfW-tX-BNi"/>
+                            <constraint firstItem="j5K-lJ-3AR" firstAttribute="top" secondItem="4hl-GD-Qp7" secondAttribute="bottom" id="BjJ-rc-kG3"/>
+                            <constraint firstItem="j5K-lJ-3AR" firstAttribute="trailing" secondItem="d4g-xq-i4I" secondAttribute="trailing" id="WGc-wQ-sCR"/>
+                            <constraint firstItem="d4g-xq-i4I" firstAttribute="bottom" secondItem="j5K-lJ-3AR" secondAttribute="bottom" constant="34" id="cgK-g1-Pgl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="8Us-sB-gGa">
+                        <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="qnH-vT-Hc4">
+                            <color key="tintColor" red="0.33333333329999998" green="0.63137254899999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="reloadPage:" destination="xKR-dh-JRm" id="E91-NZ-juy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="4hl-GD-Qp7" id="Cr5-Hy-n07"/>
+                        <outlet property="webView" destination="d4g-xq-i4I" id="Znu-MQ-OUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iN-56-gnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +152,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UIp-H9-cuY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.33333333329999998" green="0.63137254899999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
                         </textAttributes>
@@ -144,6 +173,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="NYT Reader" id="1J4-Sa-kbd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6V1-Kx-WP9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
