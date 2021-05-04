@@ -10,7 +10,7 @@ import UIKit
 
 struct Articles
 {
-    var title: String
-    var url: String
-    var imageURL: String    
+    var title:      String
+    var url:        String
+    var imageURL:   String
 }

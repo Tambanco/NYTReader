@@ -14,22 +14,20 @@ import Kingfisher
 class NewsViewController: UITableViewController
 {
     // MARK: - Properties
-    var newsArray = [Articles]()
-    let basicURL = "https://api.nytimes.com/svc/topstories/v2/"
-    var section = ""
-    let apiKey = "2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
-    
+    let basicURL: String        = URLs().basicURL
+    let apiKey: String          = URLs().apiKey
+    var newsArray: [Articles]   = []
+    var section: String         = URLs().section
+
     // MARK: - Outlets
     @IBOutlet weak var tableNews: UITableView!
-//    @IBOutlet weak var cellImageView: UIImageView!
     
     // MARK: - Life cycle
     override func viewDidLoad()
     {
-        
+        super.viewDidLoad()
         let nib = UINib.init(nibName: "NewsTableViewCell", bundle: nil)
         self.tableNews.register(nib, forCellReuseIdentifier: "NewsTableViewCell")
-        super.viewDidLoad()
         tableNews.estimatedRowHeight = 80
         tableNews.rowHeight = UITableView.automaticDimension
         self.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
