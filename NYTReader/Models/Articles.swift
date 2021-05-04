@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct DataModel
+struct Articles
 {
     var title: String
     var url: String

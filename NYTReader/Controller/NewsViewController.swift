@@ -14,10 +14,10 @@ import Kingfisher
 class NewsViewController: UITableViewController
 {
     // MARK: - Properties
-    var newsArray       = [DataModel]()
-    let basicURL         = "https://api.nytimes.com/svc/topstories/v2/"
-    var section         = "world"
-    let apiKey          = "2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
+    var newsArray = [Articles]()
+    let basicURL = "https://api.nytimes.com/svc/topstories/v2/"
+    var section = "books"
+    let apiKey = "2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     
     // MARK: - Outlets
     @IBOutlet weak var cellImageView: UIImageView!
@@ -116,7 +116,7 @@ extension NewsViewController
             let rawItems = json["results"].arrayValue
             if rawItems.count > 0
             {
-                rawItems.forEach({ newsArray.append( DataModel( title:      $0["title"].string ?? "issues with Title",
+                rawItems.forEach({ newsArray.append( Articles( title:      $0["title"].string ?? "issues with Title",
                                                                 url:        $0["url"].string ?? "Issues with url",
                                                                 imageURL:   $0["multimedia"][1]["url"].string ?? "Ussues with imageURL") ) })
             }
