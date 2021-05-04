@@ -19,6 +19,9 @@
 		49F4F72126418A770094FF31 /* Network manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72026418A770094FF31 /* Network manager.swift */; };
 		49F4F72426418A830094FF31 /* JSON Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72326418A830094FF31 /* JSON Parser.swift */; };
 		49F4F72726418A900094FF31 /* Refresh controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72626418A900094FF31 /* Refresh controller.swift */; };
+		49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */; };
+		49F4F73026419C040094FF31 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */; };
+		49F4F73126419C040094FF31 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F4F72F26419C040094FF31 /* SettingsTableViewCell.xib */; };
 		56182AF82445EE790077ACCA /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56182AF72445EE790077ACCA /* Articles.swift */; };
 		56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A40F244349FB00D015E4 /* AppDelegate.swift */; };
 		56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A411244349FB00D015E4 /* SceneDelegate.swift */; };
@@ -43,6 +46,9 @@
 		49F4F72026418A770094FF31 /* Network manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network manager.swift"; sourceTree = "<group>"; };
 		49F4F72326418A830094FF31 /* JSON Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON Parser.swift"; sourceTree = "<group>"; };
 		49F4F72626418A900094FF31 /* Refresh controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Refresh controller.swift"; sourceTree = "<group>"; };
+		49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		49F4F72F26419C040094FF31 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		56182AF72445EE790077ACCA /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		56B8A40C244349FB00D015E4 /* NYTReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B8A40F244349FB00D015E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,8 @@
 				49640D2C26412D17008CB198 /* SectionsTableViewCell.xib */,
 				49640D3E26417C5D008CB198 /* NewsTableViewCell.swift */,
 				49640D3F26417C5D008CB198 /* NewsTableViewCell.xib */,
+				49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */,
+				49F4F72F26419C040094FF31 /* SettingsTableViewCell.xib */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 				49640D3926412E14008CB198 /* SectionsViewController.swift */,
 				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
 				56BBAA75244372BF00407140 /* WebViewController.swift */,
+				49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */,
 				49640D3426412DB6008CB198 /* XIB */,
 			);
 			path = Controller;
@@ -238,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F4F73126419C040094FF31 /* SettingsTableViewCell.xib in Resources */,
 				56B8A41C24434A0000D015E4 /* LaunchScreen.storyboard in Resources */,
 				49640D2E26412D17008CB198 /* SectionsTableViewCell.xib in Resources */,
 				56B8A41924434A0000D015E4 /* Assets.xcassets in Resources */,
@@ -305,7 +315,9 @@
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* Articles.swift in Sources */,
 				49640D2D26412D17008CB198 /* SectionsTableViewCell.swift in Sources */,
+				49F4F73026419C040094FF31 /* SettingsTableViewCell.swift in Sources */,
 				49F4F72126418A770094FF31 /* Network manager.swift in Sources */,
+				49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */,
 				49F4F71D26418A6A0094FF31 /* URL Builder.swift in Sources */,
 				49F4F72726418A900094FF31 /* Refresh controller.swift in Sources */,
 				49640D4026417C5D008CB198 /* NewsTableViewCell.swift in Sources */,
