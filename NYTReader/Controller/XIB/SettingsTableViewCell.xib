@@ -17,17 +17,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8A-iL-UVa">
-                        <rect key="frame" x="10" y="10" width="48" height="49"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <rect key="frame" x="10" y="10" width="47" height="39"/>
+                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-lA-zg1">
-                        <rect key="frame" x="419" y="10" width="51" height="49"/>
+                        <rect key="frame" x="419" y="10" width="51" height="39"/>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6c-ow-29w">
-                        <rect key="frame" x="10" y="69" width="48" height="31"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <rect key="frame" x="10" y="69" width="47" height="31"/>
+                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,7 +38,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="0Fw-w7-XYH" secondAttribute="bottom" constant="10" id="2Qt-kh-v5C"/>
                     <constraint firstItem="N6c-ow-29w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4pr-WU-B4c"/>
-                    <constraint firstItem="N6c-ow-29w" firstAttribute="top" secondItem="C8A-iL-UVa" secondAttribute="bottom" constant="10" id="7js-A3-lPJ"/>
+                    <constraint firstItem="N6c-ow-29w" firstAttribute="top" secondItem="C8A-iL-UVa" secondAttribute="bottom" constant="20" id="7js-A3-lPJ"/>
                     <constraint firstAttribute="trailing" secondItem="0Fw-w7-XYH" secondAttribute="trailing" constant="10" id="DSr-eR-mO7"/>
                     <constraint firstItem="UaR-lA-zg1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ECP-it-Hqi"/>
                     <constraint firstItem="C8A-iL-UVa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GTe-mO-cSj"/>
@@ -47,7 +47,7 @@
                     <constraint firstItem="UaR-lA-zg1" firstAttribute="centerY" secondItem="C8A-iL-UVa" secondAttribute="centerY" id="cOs-gp-lNZ"/>
                     <constraint firstAttribute="trailing" secondItem="UaR-lA-zg1" secondAttribute="trailing" constant="10" id="lvF-ZA-ieD"/>
                     <constraint firstAttribute="bottom" secondItem="N6c-ow-29w" secondAttribute="bottom" constant="10" id="tCN-zQ-06h"/>
-                    <constraint firstItem="0Fw-w7-XYH" firstAttribute="top" secondItem="UaR-lA-zg1" secondAttribute="bottom" constant="10" id="zJK-6h-L3C"/>
+                    <constraint firstItem="0Fw-w7-XYH" firstAttribute="top" secondItem="UaR-lA-zg1" secondAttribute="bottom" constant="20" id="zJK-6h-L3C"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
