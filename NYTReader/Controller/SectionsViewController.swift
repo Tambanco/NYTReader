@@ -11,15 +11,16 @@ import UIKit
 class SectionsViewController: UITableViewController
 {
     // MARK: - Properties
-    @IBOutlet weak var tblUsers: UITableView!
+    @IBOutlet weak var tableSections: UITableView!
     let sections = Sections()
 
     // MARK: - Life cycle
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         let nib = UINib.init(nibName: "SectionsTableViewCell", bundle: nil)
-        self.tblUsers.register(nib, forCellReuseIdentifier: "SectionsTableViewCell")
+        self.tableSections.register(nib, forCellReuseIdentifier: "SectionsTableViewCell")
     }
 
     // MARK: - Table view data source

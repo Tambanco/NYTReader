@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="nfV-RT-Tky" kind="push" identifier="goToArticles" id="g7p-oV-Hm3"/>
+                                    <segue destination="nfV-RT-Tky" kind="show" identifier="goToArticles" id="g7p-oV-Hm3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,14 +36,14 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Sections" image="books.vertical" catalog="system" id="mIn-1B-S48"/>
                     <connections>
-                        <outlet property="tblUsers" destination="45r-VQ-BoC" id="sn4-eF-7rI"/>
+                        <outlet property="tableSections" destination="45r-VQ-BoC" id="sn4-eF-7rI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DL-rd-ihP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="854"/>
+            <point key="canvasLocation" x="1848" y="86"/>
         </scene>
-        <!--NYTReader-->
+        <!--Article-->
         <scene sceneID="Y0c-ol-CuU">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="nfV-RT-Tky" customClass="NewsViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Article" image="book" catalog="system" id="T54-RA-SGH"/>
-                    <navigationItem key="navigationItem" title="NYTReader" id="piD-ut-NNE">
+                    <navigationItem key="navigationItem" id="piD-ut-NNE">
                         <barButtonItem key="backBarButtonItem" title="Articles" id="p8X-er-3bk"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fBk-it-Q5j">
@@ -86,6 +86,9 @@
                             </fragment>
                         </attributedString>
                     </refreshControl>
+                    <connections>
+                        <outlet property="tableNews" destination="gzQ-n6-qgH" id="XC2-2D-EL4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdJ-cP-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,27 +135,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qr0-9j-g66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886.95652173913049" y="85.714285714285708"/>
+            <point key="canvasLocation" x="301" y="86"/>
         </scene>
-        <!--Sections-->
+        <!--NYT Reader-->
         <scene sceneID="1KJ-gl-7Sx">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iI3-Vp-5QN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Sections" id="1J4-Sa-kbd"/>
+                    <navigationItem key="navigationItem" title="NYT Reader" id="1J4-Sa-kbd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6V1-Kx-WP9">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="4S9-S7-nCe" kind="relationship" relationship="viewControllers" id="gAv-D5-yUa"/>
-                        <segue destination="nfV-RT-Tky" kind="relationship" relationship="viewControllers" id="wxJ-iZ-FRa"/>
                         <segue destination="6BK-Dv-zsk" kind="relationship" relationship="viewControllers" id="Lk3-0B-7uu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="exa-SC-FPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666.6666666666667" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1107" y="86"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mR7-f7-gF8">
@@ -168,12 +170,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqI-ND-T2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="885"/>
+            <point key="canvasLocation" x="1848" y="822"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="wxJ-iZ-FRa"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
