@@ -16,7 +16,7 @@ class NewsViewController: UITableViewController
     // MARK: - Properties
     var newsArray = [Articles]()
     let basicURL = "https://api.nytimes.com/svc/topstories/v2/"
-    var section = "books"
+    var section = ""
     let apiKey = "2AY5aYQX2U3y4ytAuiNg7N6u9AMrsPpg"
     
     // MARK: - Outlets

@@ -134,12 +134,12 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="85.714285714285708"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Sections-->
         <scene sceneID="1KJ-gl-7Sx">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iI3-Vp-5QN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="1J4-Sa-kbd"/>
+                    <navigationItem key="navigationItem" title="Sections" id="1J4-Sa-kbd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6V1-Kx-WP9">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,7 +172,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g7p-oV-Hm3"/>
+        <segue reference="wxJ-iZ-FRa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>

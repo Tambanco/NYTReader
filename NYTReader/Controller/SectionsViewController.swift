@@ -31,6 +31,7 @@ class SectionsViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SectionsTableViewCell", for: indexPath) as! SectionsTableViewCell
+        cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.sectionLabel.text = sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections))[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -49,6 +50,7 @@ class SectionsViewController: UITableViewController
             {
                 let articleVC = segue.destination as! NewsViewController
                 articleVC.section = sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections))[indexPath.row]
+                articleVC.navigationItem.title = sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections))[indexPath.row]
             }
         }
     }
