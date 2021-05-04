@@ -51,6 +51,7 @@ class NewsViewController: UITableViewController
         
         let processor = RoundCornerImageProcessor(cornerRadius: 10)
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
+        cell.accessoryType = .disclosureIndicator
         cell.newsTitleLabel?.text = newsArray[indexPath.row].title
         cell.newsTitleLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
         cell.newsTitleLabel?.lineBreakMode = .byWordWrapping
@@ -58,14 +59,14 @@ class NewsViewController: UITableViewController
         
         cell.newsCoverImage?.kf.indicatorType = .activity
         cell.newsCoverImage?.kf.setImage( with: URL(string: newsArray[indexPath.row].imageURL),
-                                     placeholder: UIImage(named: "placeholder"),
-                                     options: [.transition(.fade(0.2)), .processor(processor)] )
+                                          placeholder: UIImage(named: "placeholder"),
+                                          options: [.transition(.fade(0.2)), .processor(processor)] )
         cell.newsCoverImage?.kf.indicatorType = .activity
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath)
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "goToWebVersion", sender: indexPath)
     }
