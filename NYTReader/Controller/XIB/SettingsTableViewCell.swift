@@ -34,29 +34,38 @@ class SettingsTableViewCell: UITableViewCell
     
     @IBAction func setSystemDarkMode(_ sender: UISwitch)
     {
-        if traitCollection.userInterfaceStyle == .light
+        if sender.isOn == true
         {
-            window?.overrideUserInterfaceStyle = .light
-            userDefaults.set(sender.isOn, forKey: "SetSystemDarkMode")
+            setDarkAppearance(traitCollection.userInterfaceStyle, sender.isOn, "SetSystemDarkMode")
         }
         else
         {
-            window?.overrideUserInterfaceStyle = .dark
-            userDefaults.set(sender.isOn, forKey: "SetSystemDarkMode")
+            setDarkAppearance(.light, sender.isOn, "SetSystemDarkMode")
         }
+        
     }
+        
     
     @IBAction func setDarkMode(_ sender: UISwitch)
     {
         if sender.isOn == true
         {
-            window?.overrideUserInterfaceStyle = .dark
-            userDefaults.set(sender.isOn, forKey: "SetDarkMode")
+            setDarkAppearance(.dark, sender.isOn, "SetDarkMode")
         }
         else
         {
-            window?.overrideUserInterfaceStyle = .light
-            userDefaults.set(sender.isOn, forKey: "SetDarkMode")
+            
+            setDarkAppearance(.light, sender.isOn, "SetDarkMode")
         }
+    }
+}
+
+    // MARK: - Dark mode setter
+extension SettingsTableViewCell
+{
+    func setDarkAppearance(_ inputMode: UIUserInterfaceStyle, _ senderIsOn: Bool, _ key: String)
+    {
+        window?.overrideUserInterfaceStyle = inputMode
+        userDefaults.setValue(senderIsOn, forKey: key)
     }
 }
