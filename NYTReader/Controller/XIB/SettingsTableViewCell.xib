@@ -22,17 +22,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-lA-zg1">
-                        <rect key="frame" x="419" y="10" width="51" height="39"/>
-                    </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6c-ow-29w">
                         <rect key="frame" x="10" y="69" width="47" height="31"/>
                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Fw-w7-XYH">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0Fw-w7-XYH">
                         <rect key="frame" x="419" y="69" width="51" height="31"/>
+                        <connections>
+                            <action selector="setDarkMode:" destination="KGk-i7-Jjw" eventType="valueChanged" id="j3k-PY-yDM"/>
+                        </connections>
+                    </switch>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-lA-zg1">
+                        <rect key="frame" x="419" y="10" width="51" height="39"/>
+                        <connections>
+                            <action selector="setSystemDarkMode:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Y1j-zp-D6Z"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>

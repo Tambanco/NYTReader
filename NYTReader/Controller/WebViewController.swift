@@ -29,14 +29,14 @@ class WebViewController: UIViewController, WKUIDelegate
         webView.load(myRequest)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-           if keyPath == "estimatedProgress" {
-               print("estimatedProgress")
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
+    {
+           if keyPath == "estimatedProgress"
+           {
                progressView.progress = Float(webView.estimatedProgress)
            }
        }
 
-   
     @IBAction func reloadPage(_ sender: UIBarButtonItem)
     {
         webView.reload()

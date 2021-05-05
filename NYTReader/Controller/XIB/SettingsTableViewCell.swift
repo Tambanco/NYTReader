@@ -16,11 +16,14 @@ class SettingsTableViewCell: UITableViewCell
     @IBOutlet weak var deviceModeSwitch: UISwitch!
     @IBOutlet weak var darkModeSwitch: UISwitch!
     
+    // MARK: - Properties
+    let userDefaults = UserDefaults.standard
 
     override func awakeFromNib()
     {
         super.awakeFromNib()
-       
+        darkModeSwitch.isOn = userDefaults.bool(forKey: "SetDarkMode")
+        deviceModeSwitch.isOn = userDefaults.bool(forKey: "SetSystemDarkMode")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool)
@@ -29,4 +32,31 @@ class SettingsTableViewCell: UITableViewCell
 
     }
     
+    @IBAction func setSystemDarkMode(_ sender: UISwitch)
+    {
+        if traitCollection.userInterfaceStyle == .light
+        {
+            window?.overrideUserInterfaceStyle = .light
+            userDefaults.set(sender.isOn, forKey: "SetSystemDarkMode")
+        }
+        else
+        {
+            window?.overrideUserInterfaceStyle = .dark
+            userDefaults.set(sender.isOn, forKey: "SetSystemDarkMode")
+        }
+    }
+    
+    @IBAction func setDarkMode(_ sender: UISwitch)
+    {
+        if sender.isOn == true
+        {
+            window?.overrideUserInterfaceStyle = .dark
+            userDefaults.set(sender.isOn, forKey: "SetDarkMode")
+        }
+        else
+        {
+            window?.overrideUserInterfaceStyle = .light
+            userDefaults.set(sender.isOn, forKey: "SetDarkMode")
+        }
+    }
 }

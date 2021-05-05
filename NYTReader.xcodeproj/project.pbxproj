@@ -134,7 +134,6 @@
 				56BBAA772443ABAD00407140 /* Controller */,
 				49F4F717264187730094FF31 /* Extentions */,
 				56BBAA7A2443AC4500407140 /* Supported files */,
-				56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */,
 				56B8A41D24434A0000D015E4 /* Info.plist */,
 			);
 			path = NYTReader;
@@ -166,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				56B8A415244349FB00D015E4 /* Main.storyboard */,
+				56B8A41A24434A0000D015E4 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
