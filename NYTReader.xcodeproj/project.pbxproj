@@ -12,6 +12,7 @@
 		49357B37265A36C3002151F8 /* SectionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */; };
 		49357B3B265A3762002151F8 /* NewsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B3A265A3762002151F8 /* NewsViewControllerTests.swift */; };
 		49357B3F265A37CF002151F8 /* SettingsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B3E265A37CF002151F8 /* SettingsTableViewControllerTests.swift */; };
+		49357B48265A38FA002151F8 /* URLsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B47265A38FA002151F8 /* URLsTests.swift */; };
 		49640D2926412920008CB198 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49640D2826412920008CB198 /* Sections.swift */; };
 		49640D2D26412D17008CB198 /* SectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49640D2B26412D17008CB198 /* SectionsTableViewCell.swift */; };
 		49640D2E26412D17008CB198 /* SectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49640D2C26412D17008CB198 /* SectionsTableViewCell.xib */; };
@@ -55,6 +56,7 @@
 		49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewControllerTests.swift; sourceTree = "<group>"; };
 		49357B3A265A3762002151F8 /* NewsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewControllerTests.swift; sourceTree = "<group>"; };
 		49357B3E265A37CF002151F8 /* SettingsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerTests.swift; sourceTree = "<group>"; };
+		49357B47265A38FA002151F8 /* URLsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLsTests.swift; sourceTree = "<group>"; };
 		49640D2826412920008CB198 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		49640D2B26412D17008CB198 /* SectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsTableViewCell.swift; sourceTree = "<group>"; };
 		49640D2C26412D17008CB198 /* SectionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsTableViewCell.xib; sourceTree = "<group>"; };
@@ -106,11 +108,20 @@
 			children = (
 				49357B2C265A3685002151F8 /* NYTReaderTests.swift */,
 				49357B2E265A3685002151F8 /* Info.plist */,
+				49357B42265A38E0002151F8 /* Controller */,
+				49357B47265A38FA002151F8 /* URLsTests.swift */,
+			);
+			path = NYTReaderTests;
+			sourceTree = "<group>";
+		};
+		49357B42265A38E0002151F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */,
 				49357B3A265A3762002151F8 /* NewsViewControllerTests.swift */,
 				49357B3E265A37CF002151F8 /* SettingsTableViewControllerTests.swift */,
 			);
-			path = NYTReaderTests;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		49640D3426412DB6008CB198 /* XIB */ = {
@@ -379,6 +390,7 @@
 				49357B3F265A37CF002151F8 /* SettingsTableViewControllerTests.swift in Sources */,
 				49357B3B265A3762002151F8 /* NewsViewControllerTests.swift in Sources */,
 				49357B37265A36C3002151F8 /* SectionsViewControllerTests.swift in Sources */,
+				49357B48265A38FA002151F8 /* URLsTests.swift in Sources */,
 				49357B2D265A3685002151F8 /* NYTReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
