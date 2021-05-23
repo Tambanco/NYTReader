@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D50D9E2308FF94053E1854F /* Pods_NYTReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A432D4553F1D6142C30C79F /* Pods_NYTReader.framework */; };
+		49357B2D265A3685002151F8 /* NYTReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B2C265A3685002151F8 /* NYTReaderTests.swift */; };
+		49357B37265A36C3002151F8 /* SectionsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */; };
 		49640D2926412920008CB198 /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49640D2826412920008CB198 /* Sections.swift */; };
 		49640D2D26412D17008CB198 /* SectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49640D2B26412D17008CB198 /* SectionsTableViewCell.swift */; };
 		49640D2E26412D17008CB198 /* SectionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49640D2C26412D17008CB198 /* SectionsTableViewCell.xib */; };
@@ -32,9 +34,23 @@
 		56BBAA76244372BF00407140 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BBAA75244372BF00407140 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		49357B2F265A3685002151F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56B8A404244349FB00D015E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56B8A40B244349FB00D015E4;
+			remoteInfo = NYTReader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		13991361BBB651990B3BA5AD /* Pods-NYTReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTReader.release.xcconfig"; path = "Target Support Files/Pods-NYTReader/Pods-NYTReader.release.xcconfig"; sourceTree = "<group>"; };
 		1C429DA7CDF5882B6F195692 /* Pods-NYTReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTReader.debug.xcconfig"; path = "Target Support Files/Pods-NYTReader/Pods-NYTReader.debug.xcconfig"; sourceTree = "<group>"; };
+		49357B2A265A3685002151F8 /* NYTReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49357B2C265A3685002151F8 /* NYTReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTReaderTests.swift; sourceTree = "<group>"; };
+		49357B2E265A3685002151F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewControllerTests.swift; sourceTree = "<group>"; };
 		49640D2826412920008CB198 /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
 		49640D2B26412D17008CB198 /* SectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsTableViewCell.swift; sourceTree = "<group>"; };
 		49640D2C26412D17008CB198 /* SectionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionsTableViewCell.xib; sourceTree = "<group>"; };
@@ -63,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49357B27265A3685002151F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56B8A409244349FB00D015E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49357B2B265A3685002151F8 /* NYTReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				49357B2C265A3685002151F8 /* NYTReaderTests.swift */,
+				49357B2E265A3685002151F8 /* Info.plist */,
+				49357B36265A36C3002151F8 /* SectionsViewControllerTests.swift */,
+			);
+			path = NYTReaderTests;
+			sourceTree = "<group>";
+		};
 		49640D3426412DB6008CB198 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				56B8A40E244349FB00D015E4 /* NYTReader */,
+				49357B2B265A3685002151F8 /* NYTReaderTests */,
 				56B8A40D244349FB00D015E4 /* Products */,
 				5D9AD8A5BB3C22704007776B /* Pods */,
 				4AD3A3920DAA576247E7C5A9 /* Frameworks */,
@@ -120,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				56B8A40C244349FB00D015E4 /* NYTReader.app */,
+				49357B2A265A3685002151F8 /* NYTReaderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +225,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		49357B29265A3685002151F8 /* NYTReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49357B33265A3685002151F8 /* Build configuration list for PBXNativeTarget "NYTReaderTests" */;
+			buildPhases = (
+				49357B26265A3685002151F8 /* Sources */,
+				49357B27265A3685002151F8 /* Frameworks */,
+				49357B28265A3685002151F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49357B30265A3685002151F8 /* PBXTargetDependency */,
+			);
+			name = NYTReaderTests;
+			productName = NYTReaderTests;
+			productReference = 49357B2A265A3685002151F8 /* NYTReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		56B8A40B244349FB00D015E4 /* NYTReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56B8A42024434A0000D015E4 /* Build configuration list for PBXNativeTarget "NYTReader" */;
@@ -215,10 +268,14 @@
 		56B8A404244349FB00D015E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Tambanco;
 				TargetAttributes = {
+					49357B29265A3685002151F8 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 56B8A40B244349FB00D015E4;
+					};
 					56B8A40B244349FB00D015E4 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -238,11 +295,19 @@
 			projectRoot = "";
 			targets = (
 				56B8A40B244349FB00D015E4 /* NYTReader */,
+				49357B29265A3685002151F8 /* NYTReaderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49357B28265A3685002151F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56B8A40A244349FB00D015E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +366,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		49357B26265A3685002151F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49357B37265A36C3002151F8 /* SectionsViewControllerTests.swift in Sources */,
+				49357B2D265A3685002151F8 /* NYTReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56B8A408244349FB00D015E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +400,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		49357B30265A3685002151F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56B8A40B244349FB00D015E4 /* NYTReader */;
+			targetProxy = 49357B2F265A3685002151F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		56B8A415244349FB00D015E4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -346,6 +428,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		49357B31265A3685002151F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = NYTReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.NYTReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTReader.app/NYTReader";
+			};
+			name = Debug;
+		};
+		49357B32265A3685002151F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = NYTReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.NYTReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTReader.app/NYTReader";
+			};
+			name = Release;
+		};
 		56B8A41E24434A0000D015E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -507,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49357B33265A3685002151F8 /* Build configuration list for PBXNativeTarget "NYTReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49357B31265A3685002151F8 /* Debug */,
+				49357B32265A3685002151F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		56B8A407244349FB00D015E4 /* Build configuration list for PBXProject "NYTReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

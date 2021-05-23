@@ -21,6 +21,7 @@ class SectionsViewController: UITableViewController
         
         let nib = UINib.init(nibName: "SectionsTableViewCell", bundle: nil)
         self.tableSections.register(nib, forCellReuseIdentifier: "SectionsTableViewCell")
+        
     }
 
     // MARK: - Table view data source

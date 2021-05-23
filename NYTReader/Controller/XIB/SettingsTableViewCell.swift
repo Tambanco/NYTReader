@@ -32,6 +32,7 @@ class SettingsTableViewCell: UITableViewCell
 
     }
     
+    // MARK: - DeviceModeSwitch
     @IBAction func setSystemDarkMode(_ sender: UISwitch)
     {
         if sender.isOn == true
@@ -45,7 +46,7 @@ class SettingsTableViewCell: UITableViewCell
         
     }
         
-    
+    // MARK: - DarkModeSwitch
     @IBAction func setDarkMode(_ sender: UISwitch)
     {
         if sender.isOn == true
@@ -54,7 +55,6 @@ class SettingsTableViewCell: UITableViewCell
         }
         else
         {
-            
             setDarkAppearance(.light, sender.isOn, "SetDarkMode")
         }
     }
@@ -65,7 +65,10 @@ extension SettingsTableViewCell
 {
     func setDarkAppearance(_ inputMode: UIUserInterfaceStyle, _ senderIsOn: Bool, _ key: String)
     {
-        window?.overrideUserInterfaceStyle = inputMode
+        if #available(iOS 13.0, *)
+        {
+            window?.overrideUserInterfaceStyle = inputMode
+        }
         userDefaults.setValue(senderIsOn, forKey: key)
     }
 }
