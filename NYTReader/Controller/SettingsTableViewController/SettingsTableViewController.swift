@@ -8,37 +8,39 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController
-{
+class SettingsTableViewController: UIViewController {
     // MARK: - Outlets
 //    @IBOutlet weak var tableSettings: UITableView!
     var tableSettings: UITableView!
 
     // MARK: - Life cycle
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib.init(nibName: "SettingsTableViewCell", bundle: nil)
-        self.tableSettings.register(nib, forCellReuseIdentifier: "SettingsTableViewCell")
-        self.tableSettings.separatorStyle = .none
+        tableSettingsInitializer()
     }
     
- 
+    func tableSettingsInitializer() {
+        let tableSettings = UITableView()
+        self.tableSettings.separatorStyle = .none
+        view.addSubview(tableSettings)
         
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+        tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SectionCell.reuseId)
+        
+        tableSettings.dataSource = self
+        tableSettings.delegate = self
+    }
+}
+
+extension SettingsTableViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
-        cell.selectionStyle = .none
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
         cell.deviceModeLabel.text = "Mode as on the device"
         cell.darkModeLabel.text =  "Dark mode"
-
         return cell
     }
 }
