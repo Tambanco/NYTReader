@@ -26,7 +26,7 @@ class SettingsTableViewController: UIViewController {
         
         tableSettings.separatorStyle = .none
         tableSettings.rowHeight = 120
-    
+        
         tableSettings.dataSource = self
         tableSettings.delegate = self
         
@@ -45,6 +45,7 @@ extension SettingsTableViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableSettings.dequeueReusableCell(withIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
+        cell.selectionStyle = .none
         return cell
     }
 }
