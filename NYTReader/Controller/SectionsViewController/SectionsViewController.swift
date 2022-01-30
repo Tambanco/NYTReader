@@ -51,8 +51,7 @@ class SectionsViewController: UIViewController {
 
 extension SectionsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections)).count
-        return 3
+        return sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections)).count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
