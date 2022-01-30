@@ -32,11 +32,7 @@ class SettingsTableViewCell: UITableViewCell
     
     // MARK: - DeviceModeSwitch
     @IBAction func setSystemDarkMode(_ sender: UISwitch) {
-        if sender.isOn == true {
-            setDarkAppearance(traitCollection.userInterfaceStyle, sender.isOn, "SetSystemDarkMode")
-        } else {
-            setDarkAppearance(.light, sender.isOn, "SetSystemDarkMode")
-        }
+
     }
         
     // MARK: - DarkModeSwitch

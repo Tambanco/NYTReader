@@ -31,6 +31,7 @@ class SettingsCell: UITableViewCell {
     
     let deviceModeSwitch: UISwitch = {
         let switchH = UISwitch()
+        switchH.addTarget(self, action: #selector(setSystemDarkMode), for: .valueChanged)
         return switchH
     }()
     let darkModeSwitch: UISwitch = {
@@ -72,5 +73,22 @@ class SettingsCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func setSystemDarkMode(_ sender: UISwitch) {
+        if sender.isOn == true {
+            setDarkAppearance(traitCollection.userInterfaceStyle, sender.isOn, "SetSystemDarkMode")
+        } else {
+            setDarkAppearance(.light, sender.isOn, "SetSystemDarkMode")
+        }
+    }
+}
+
+extension SettingsCell {
+    func setDarkAppearance(_ inputMode: UIUserInterfaceStyle, _ senderIsOn: Bool, _ key: String) {
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = inputMode
+        }
+        userDefaults.setValue(senderIsOn, forKey: key)
     }
 }
