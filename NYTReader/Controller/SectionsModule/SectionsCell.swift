@@ -14,12 +14,6 @@ class SectionCell: UITableViewCell {
     //reuse Id
     static let reuseId = "SectionCell"
     
-    let tableViewCell: UITableView = {
-        let view = UITableView()
-//        view.backgroundColor = .red
-        return view
-    }()
-    
     let sectionLabel: UILabel = {
         let label = UILabel()
         label.text = "Section"
@@ -33,15 +27,6 @@ class SectionCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: SectionCell.reuseId)
         
         // 1 layer
-        addSubview(tableViewCell)
-
-        tableViewCell.translatesAutoresizingMaskIntoConstraints = false
-        tableViewCell.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        tableViewCell.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        tableViewCell.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        tableViewCell.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
-        // 2 layer
         addSubview(sectionLabel)
         
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -40,7 +40,6 @@ class NewsCell: UITableViewCell {
         newsCoverImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         newsCoverImage.trailingAnchor.constraint(equalTo: newsTitleLabel.leadingAnchor, constant: -10).isActive = true
         newsCoverImage.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-//        newsCoverImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         newsCoverImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         newsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
