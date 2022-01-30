@@ -24,6 +24,7 @@ class SectionCell: UITableViewCell {
         let label = UILabel()
         label.text = "Section"
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
+        label.backgroundColor = .yellow
         return label
     }()
     
@@ -35,18 +36,18 @@ class SectionCell: UITableViewCell {
         addSubview(tableViewCell)
         
         tableViewCell.translatesAutoresizingMaskIntoConstraints = false
-        tableViewCell.leadingAnchor.constraint(equalTo: leadingAnchor.self, constant: 20).isActive = true
-        tableViewCell.trailingAnchor.constraint(equalTo: trailingAnchor.self, constant: 20).isActive = true
-        tableViewCell.topAnchor.constraint(equalTo: topAnchor.self, constant: 20).isActive = true
-        tableViewCell.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        tableViewCell.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        tableViewCell.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        tableViewCell.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        tableViewCell.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // 2 layer
         tableViewCell.addSubview(sectionLabel)
         
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false
-        sectionLabel.topAnchor.constraint(equalTo: tableViewCell.topAnchor, constant: 20).isActive = true
-        sectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        sectionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 20).isActive = true
+        sectionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        sectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        sectionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         sectionLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
     }
     

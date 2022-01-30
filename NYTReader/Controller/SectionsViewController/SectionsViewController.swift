@@ -9,8 +9,9 @@
 import UIKit
 
 class SectionsViewController: UIViewController {
+    
     // MARK: - Properties
-    @IBOutlet weak var tableSections: UITableView!
+    var tableSections: UITableView!
     let sections = Sections()
 
     // MARK: - Life cycle
@@ -18,16 +19,23 @@ class SectionsViewController: UIViewController {
         super.viewDidLoad()
         
         initializationTableSections()
-                
     }
     
     func initializationTableSections() {
-        tableSections.register(SectionCell.self, forCellReuseIdentifier: SectionCell.reuseId)
         
+        tableSections = UITableView()
+        tableSections.register(SectionCell.self, forCellReuseIdentifier: SectionCell.reuseId)
+                        
         self.view.addSubview(tableSections)
         
         tableSections.dataSource = self
         tableSections.delegate = self
+        
+        tableSections.translatesAutoresizingMaskIntoConstraints = false
+        tableSections.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        tableSections.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        tableSections.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        tableSections.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,7 +51,8 @@ class SectionsViewController: UIViewController {
 
 extension SectionsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections)).count
+//        return sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections)).count
+        return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
