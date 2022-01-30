@@ -19,54 +19,40 @@ class SettingsTableViewCell: UITableViewCell
     // MARK: - Properties
     let userDefaults = UserDefaults.standard
 
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         super.awakeFromNib()
         darkModeSwitch.isOn = userDefaults.bool(forKey: "SetDarkMode")
         deviceModeSwitch.isOn = userDefaults.bool(forKey: "SetSystemDarkMode")
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool)
-    {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
     
     // MARK: - DeviceModeSwitch
-    @IBAction func setSystemDarkMode(_ sender: UISwitch)
-    {
-        if sender.isOn == true
-        {
+    @IBAction func setSystemDarkMode(_ sender: UISwitch) {
+        if sender.isOn == true {
             setDarkAppearance(traitCollection.userInterfaceStyle, sender.isOn, "SetSystemDarkMode")
-        }
-        else
-        {
+        } else {
             setDarkAppearance(.light, sender.isOn, "SetSystemDarkMode")
         }
-        
     }
         
     // MARK: - DarkModeSwitch
-    @IBAction func setDarkMode(_ sender: UISwitch)
-    {
-        if sender.isOn == true
-        {
+    @IBAction func setDarkMode(_ sender: UISwitch) {
+        if sender.isOn == true {
             setDarkAppearance(.dark, sender.isOn, "SetDarkMode")
-        }
-        else
-        {
+        } else {
             setDarkAppearance(.light, sender.isOn, "SetDarkMode")
         }
     }
 }
 
     // MARK: - Dark mode setter
-extension SettingsTableViewCell
-{
-    func setDarkAppearance(_ inputMode: UIUserInterfaceStyle, _ senderIsOn: Bool, _ key: String)
-    {
-        if #available(iOS 13.0, *)
-        {
+extension SettingsTableViewCell {
+    func setDarkAppearance(_ inputMode: UIUserInterfaceStyle, _ senderIsOn: Bool, _ key: String) {
+        if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = inputMode
         }
         userDefaults.setValue(senderIsOn, forKey: key)
