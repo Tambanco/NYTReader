@@ -18,10 +18,10 @@ class SectionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initializationTableSections()
+        tableSectionInitializer()
     }
     
-    func initializationTableSections() {
+    func tableSectionInitializer() {
         
         tableSections = UITableView()
         tableSections.register(SectionCell.self, forCellReuseIdentifier: SectionCell.reuseId)
@@ -30,6 +30,7 @@ class SectionsViewController: UIViewController {
         
         tableSections.dataSource = self
         tableSections.delegate = self
+        tableSections.rowHeight = 100
         
         tableSections.translatesAutoresizingMaskIntoConstraints = false
         tableSections.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true

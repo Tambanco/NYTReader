@@ -16,7 +16,7 @@ class SectionCell: UITableViewCell {
     
     let tableViewCell: UITableView = {
         let view = UITableView()
-//        view.backgroundColor = .red
+        view.backgroundColor = .red
         return view
     }()
     
@@ -24,7 +24,7 @@ class SectionCell: UITableViewCell {
         let label = UILabel()
         label.text = "Section"
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
-//        label.backgroundColor = .yellow
+        label.backgroundColor = .yellow
         return label
     }()
     
@@ -39,7 +39,7 @@ class SectionCell: UITableViewCell {
         tableViewCell.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableViewCell.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         tableViewCell.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        tableViewCell.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        tableViewCell.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         // 2 layer
         tableViewCell.addSubview(sectionLabel)
@@ -48,7 +48,7 @@ class SectionCell: UITableViewCell {
         sectionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         sectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         sectionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        sectionLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.5).isActive = true
+        sectionLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1).isActive = true
     }
     
     required init?(coder: NSCoder) {
