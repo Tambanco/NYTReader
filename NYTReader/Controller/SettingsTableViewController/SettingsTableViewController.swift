@@ -45,7 +45,8 @@ extension SettingsTableViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableSettings.dequeueReusableCell(withIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
-        cell.selectionStyle = .none
+//        cell.selectionStyle = .none
+        cell.contentView.isUserInteractionEnabled = false
         return cell
     }
 }
