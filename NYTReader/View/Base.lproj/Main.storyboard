@@ -97,9 +97,6 @@
                             </fragment>
                         </attributedString>
                     </refreshControl>
-                    <connections>
-                        <outlet property="tableNews" destination="gzQ-n6-qgH" id="XC2-2D-EL4"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdJ-cP-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
