@@ -25,6 +25,7 @@ class NewsCell: UITableViewCell {
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 2
+        label.backgroundColor = .blue
         return label
     }()
     
@@ -36,14 +37,15 @@ class NewsCell: UITableViewCell {
         addSubview(newsTitleLabel)
         
         newsCoverImage.translatesAutoresizingMaskIntoConstraints = false
-        newsCoverImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        newsCoverImage.trailingAnchor.constraint(equalTo: newsTitleLabel.leadingAnchor).isActive = true
-        newsCoverImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        newsCoverImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        newsCoverImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        newsCoverImage.trailingAnchor.constraint(equalTo: newsTitleLabel.leadingAnchor, constant: -10).isActive = true
+        newsCoverImage.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+//        newsCoverImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        newsCoverImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         newsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         newsTitleLabel.leadingAnchor.constraint(equalTo: newsCoverImage.trailingAnchor).isActive = true
-        newsTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        newsTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         newsTitleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         newsTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
