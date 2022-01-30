@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SectionsViewController: UITableViewController
-{
+class SectionsViewController: UITableViewController {
     // MARK: - Properties
     @IBOutlet weak var tableSections: UITableView!
     let sections = Sections()
@@ -19,9 +18,11 @@ class SectionsViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        let nib = UINib.init(nibName: "SectionsTableViewCell", bundle: nil)
-        self.tableSections.register(nib, forCellReuseIdentifier: "SectionsTableViewCell")
+        tableSections.register(SectionCell.self, forCellReuseIdentifier: SectionCell.reuseId)
         
+        tableSections.dataSource = self
+        tableSections.delegate = self
+                
     }
 
     // MARK: - Table view data source
@@ -32,8 +33,8 @@ class SectionsViewController: UITableViewController
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionsTableViewCell", for: indexPath) as! SectionsTableViewCell
-        cell.textLabel?.font = UIFont(name: "Hoefler Text", size: 17.0)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SectionCell.reuseId, for: indexPath) as! SectionCell
         cell.sectionLabel.text = sections.capitalizeFirstCharacter(sections.splitArray(sections.allSections))[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SectionsTableViewCell: UITableViewCell
-{
+class SectionsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sectionLabel: UILabel!
     
