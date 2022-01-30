@@ -18,6 +18,7 @@
 		49640D3A26412E14008CB198 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49640D3926412E14008CB198 /* SectionsViewController.swift */; };
 		498D08EA27A65E3C00B8E83B /* SectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D08E927A65E3C00B8E83B /* SectionsCell.swift */; };
 		498D08F227A694BD00B8E83B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D08F127A694BD00B8E83B /* NewsCell.swift */; };
+		49C3DC8727A72540001F3612 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3DC8627A72540001F3612 /* SettingsCell.swift */; };
 		49F4F719264188150094FF31 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F718264188150094FF31 /* URLs.swift */; };
 		49F4F71D26418A6A0094FF31 /* URL Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F71C26418A6A0094FF31 /* URL Builder.swift */; };
 		49F4F72126418A770094FF31 /* Network manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72026418A770094FF31 /* Network manager.swift */; };
@@ -61,6 +62,7 @@
 		49640D3926412E14008CB198 /* SectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
 		498D08E927A65E3C00B8E83B /* SectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsCell.swift; sourceTree = "<group>"; };
 		498D08F127A694BD00B8E83B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		49C3DC8627A72540001F3612 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		49F4F718264188150094FF31 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		49F4F71C26418A6A0094FF31 /* URL Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL Builder.swift"; sourceTree = "<group>"; };
 		49F4F72026418A770094FF31 /* Network manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network manager.swift"; sourceTree = "<group>"; };
@@ -123,23 +125,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		49640D3426412DB6008CB198 /* XIB */ = {
-			isa = PBXGroup;
-			children = (
-				498D08E827A65DDB00B8E83B /* SettingsTableViewCell */,
-			);
-			path = XIB;
-			sourceTree = "<group>";
-		};
-		498D08E827A65DDB00B8E83B /* SettingsTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */,
-				49F4F72F26419C040094FF31 /* SettingsTableViewCell.xib */,
-			);
-			path = SettingsTableViewCell;
-			sourceTree = "<group>";
-		};
 		498D08EB27A65FD000B8E83B /* SectionsModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */,
+				49C3DC8627A72540001F3612 /* SettingsCell.swift */,
+				49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */,
+				49F4F72F26419C040094FF31 /* SettingsTableViewCell.xib */,
 			);
 			path = SettingsTableViewController;
 			sourceTree = "<group>";
@@ -235,7 +223,6 @@
 				498D08EC27A65FE700B8E83B /* NewsViewController */,
 				498D08ED27A65FEE00B8E83B /* WebViewController */,
 				498D08EE27A65FF600B8E83B /* SettingsTableViewController */,
-				49640D3426412DB6008CB198 /* XIB */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -438,6 +425,7 @@
 				49640D3A26412E14008CB198 /* SectionsViewController.swift in Sources */,
 				56B8A414244349FB00D015E4 /* NewsViewController.swift in Sources */,
 				49640D2926412920008CB198 /* Sections.swift in Sources */,
+				49C3DC8727A72540001F3612 /* SettingsCell.swift in Sources */,
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
 				498D08EA27A65E3C00B8E83B /* SectionsCell.swift in Sources */,

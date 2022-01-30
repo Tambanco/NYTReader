@@ -11,7 +11,8 @@ import UIKit
 class SettingsTableViewController: UITableViewController
 {
     // MARK: - Outlets
-    @IBOutlet weak var tableSettings: UITableView!
+//    @IBOutlet weak var tableSettings: UITableView!
+    var tableSettings: UITableView!
 
     // MARK: - Life cycle
     override func viewDidLoad()
