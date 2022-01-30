@@ -25,7 +25,6 @@
 		49F4F72426418A830094FF31 /* JSON Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72326418A830094FF31 /* JSON Parser.swift */; };
 		49F4F72726418A900094FF31 /* Refresh controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72626418A900094FF31 /* Refresh controller.swift */; };
 		49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */; };
-		49F4F73026419C040094FF31 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */; };
 		56182AF82445EE790077ACCA /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56182AF72445EE790077ACCA /* Articles.swift */; };
 		56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A40F244349FB00D015E4 /* AppDelegate.swift */; };
 		56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B8A411244349FB00D015E4 /* SceneDelegate.swift */; };
@@ -68,7 +67,6 @@
 		49F4F72326418A830094FF31 /* JSON Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON Parser.swift"; sourceTree = "<group>"; };
 		49F4F72626418A900094FF31 /* Refresh controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Refresh controller.swift"; sourceTree = "<group>"; };
 		49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		56182AF72445EE790077ACCA /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		56B8A40C244349FB00D015E4 /* NYTReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B8A40F244349FB00D015E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			children = (
 				49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */,
 				49C3DC8627A72540001F3612 /* SettingsCell.swift */,
-				49F4F72E26419C040094FF31 /* SettingsTableViewCell.swift */,
 			);
 			path = SettingsTableViewController;
 			sourceTree = "<group>";
@@ -429,7 +426,6 @@
 				49F4F719264188150094FF31 /* URLs.swift in Sources */,
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* Articles.swift in Sources */,
-				49F4F73026419C040094FF31 /* SettingsTableViewCell.swift in Sources */,
 				49F4F72126418A770094FF31 /* Network manager.swift in Sources */,
 				49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */,
 				498D08F227A694BD00B8E83B /* NewsCell.swift in Sources */,

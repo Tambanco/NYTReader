@@ -36,11 +36,15 @@ class SettingsCell: UITableViewCell {
     }()
     let darkModeSwitch: UISwitch = {
         let switchH = UISwitch()
+        switchH.addTarget(self, action: #selector(setDarkMode), for: .valueChanged)
         return switchH
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: SettingsCell.reuseId)
+        
+        deviceModeSwitch.isOn = userDefaults.bool(forKey: "SetDarkMode")
+        darkModeSwitch.isOn = userDefaults.bool(forKey: "SetSystemDarkMode")
         
         // 1 layer
         addSubview(deviceModeLabel)
@@ -80,6 +84,14 @@ class SettingsCell: UITableViewCell {
             setDarkAppearance(traitCollection.userInterfaceStyle, sender.isOn, "SetSystemDarkMode")
         } else {
             setDarkAppearance(.light, sender.isOn, "SetSystemDarkMode")
+        }
+    }
+    
+    @objc func setDarkMode(_ sender: UISwitch) {
+        if sender.isOn == true {
+            setDarkAppearance(.dark, sender.isOn, "SetDarkMode")
+        } else {
+            setDarkAppearance(.light, sender.isOn, "SetDarkMode")
         }
     }
 }
