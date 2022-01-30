@@ -16,7 +16,7 @@ class SectionCell: UITableViewCell {
     
     let tableViewCell: UITableView = {
         let view = UITableView()
-        view.backgroundColor = .red
+//        view.backgroundColor = .red
         return view
     }()
     
@@ -24,7 +24,7 @@ class SectionCell: UITableViewCell {
         let label = UILabel()
         label.text = "Section"
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
-        label.backgroundColor = .yellow
+//        label.backgroundColor = .yellow
         return label
     }()
     
