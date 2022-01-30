@@ -9,8 +9,7 @@
 import UIKit
 
 class SettingsTableViewController: UIViewController {
-    // MARK: - Outlets
-//    @IBOutlet weak var tableSettings: UITableView!
+    
     var tableSettings: UITableView!
 
     // MARK: - Life cycle
@@ -21,14 +20,21 @@ class SettingsTableViewController: UIViewController {
     }
     
     func tableSettingsInitializer() {
-        let tableSettings = UITableView()
-        self.tableSettings.separatorStyle = .none
+        tableSettings = UITableView()
+        tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SectionCell.reuseId)
         view.addSubview(tableSettings)
         
-        tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SectionCell.reuseId)
+        tableSettings.separatorStyle = .none
+        
         
         tableSettings.dataSource = self
         tableSettings.delegate = self
+        
+        tableSettings.translatesAutoresizingMaskIntoConstraints = false
+        tableSettings.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        tableSettings.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        tableSettings.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        tableSettings.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0).isActive = true
     }
 }
 
@@ -38,7 +44,7 @@ extension SettingsTableViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
+        let cell = tableSettings.dequeueReusableCell(withIdentifier: SettingsCell.reuseId, for: indexPath) as! SettingsCell
         cell.deviceModeLabel.text = "Mode as on the device"
         cell.darkModeLabel.text =  "Dark mode"
         return cell
