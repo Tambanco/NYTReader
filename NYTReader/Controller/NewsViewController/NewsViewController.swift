@@ -11,8 +11,7 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class NewsViewController: UITableViewController
-{
+class NewsViewController: UITableViewController {
     // MARK: - Properties
     let basicURL: String        = URLs().basicURL
     let apiKey: String          = URLs().apiKey
@@ -23,8 +22,7 @@ class NewsViewController: UITableViewController
     @IBOutlet weak var tableNews: UITableView!
     
     // MARK: - Life cycle
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         let nib = UINib.init(nibName: "NewsTableViewCell", bundle: nil)
         self.tableNews.register(nib, forCellReuseIdentifier: "NewsTableViewCell")
@@ -35,17 +33,14 @@ class NewsViewController: UITableViewController
     }
 
     // MARK: - Table View methods
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsArray.count
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return UITableView.automaticDimension
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let processor = RoundCornerImageProcessor(cornerRadius: 10)
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
@@ -64,13 +59,11 @@ class NewsViewController: UITableViewController
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToWebVersion", sender: indexPath)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToWebVersion"
         {
             if let indexPath = self.tableView.indexPathForSelectedRow
@@ -81,6 +74,7 @@ class NewsViewController: UITableViewController
         }
     }
 }
+
 
 
 
