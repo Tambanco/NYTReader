@@ -46,7 +46,6 @@ class NewsCell: UITableViewCell {
         newsTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         newsTitleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         newsTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
     }
     
     required init?(coder: NSCoder) {

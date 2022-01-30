@@ -23,7 +23,7 @@ extension NewsViewController
                                                                 url:        $0["url"].string ?? "Issues with url",
                                                                 imageURL:   $0["multimedia"][1]["url"].string ?? "Ussues with imageURL") ) })
             }
-                tableView.reloadData()
+            tableNews.reloadData()
         }
         else
         {

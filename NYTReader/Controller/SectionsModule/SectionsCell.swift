@@ -34,7 +34,7 @@ class SectionCell: UITableViewCell {
         
         // 1 layer
         addSubview(tableViewCell)
-        
+
         tableViewCell.translatesAutoresizingMaskIntoConstraints = false
         tableViewCell.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         tableViewCell.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
@@ -42,7 +42,7 @@ class SectionCell: UITableViewCell {
         tableViewCell.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         // 2 layer
-        tableViewCell.addSubview(sectionLabel)
+        addSubview(sectionLabel)
         
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false
         sectionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true

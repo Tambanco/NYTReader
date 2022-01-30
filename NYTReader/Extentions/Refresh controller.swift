@@ -14,6 +14,6 @@ extension NewsViewController
     @objc func refresh(sender:AnyObject)
     {
         getData(url: basicURL)
-        self.refreshControl?.endRefreshing()
+        tableNews.refreshControl?.endRefreshing()
     }
 }
