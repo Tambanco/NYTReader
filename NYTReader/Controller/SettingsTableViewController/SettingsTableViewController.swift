@@ -21,12 +21,11 @@ class SettingsTableViewController: UIViewController {
     
     func tableSettingsInitializer() {
         tableSettings = UITableView()
-        tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SectionCell.reuseId)
-        view.addSubview(tableSettings)
+        tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseId)
+        self.view.addSubview(tableSettings)
         
         tableSettings.separatorStyle = .none
-        
-        
+    
         tableSettings.dataSource = self
         tableSettings.delegate = self
         
