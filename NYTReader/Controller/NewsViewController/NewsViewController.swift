@@ -30,14 +30,16 @@ class NewsViewController: UIViewController {
     func tableNewsInitializer() {
         tableNews = UITableView()
         tableNews.register(NewsCell.self, forCellReuseIdentifier: NewsCell.reuseId)
+
+        view.addSubview(tableNews)
         
+        tableNews.backgroundColor = .red
         tableNews.dataSource = self
         tableNews.delegate = self
         tableNews.estimatedRowHeight = 80
         tableNews.rowHeight = UITableView.automaticDimension
         tableNews.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
-        view.addSubview(tableNews)
         
         tableNews.translatesAutoresizingMaskIntoConstraints = false
         tableNews.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
