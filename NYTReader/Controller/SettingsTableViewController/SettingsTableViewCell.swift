@@ -25,10 +25,10 @@ class SettingsTableViewCell: UITableViewCell
         deviceModeSwitch.isOn = userDefaults.bool(forKey: "SetSystemDarkMode")
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//    }
     
     // MARK: - DeviceModeSwitch
     @IBAction func setSystemDarkMode(_ sender: UISwitch) {

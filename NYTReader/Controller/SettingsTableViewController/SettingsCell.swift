@@ -17,11 +17,15 @@ class SettingsCell: UITableViewCell {
     
     let deviceModeLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "Hoefler Text", size: 17.0)
+        label.text = "Mode as on the device"
         return label
     }()
     
     let darkModeLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont(name: "Hoefler Text", size: 17.0)
+        label.text = "Dark mode"
         return label
     }()
     
@@ -46,7 +50,8 @@ class SettingsCell: UITableViewCell {
         // constraints
         deviceModeLabel.translatesAutoresizingMaskIntoConstraints = false
         deviceModeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        deviceModeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
+        deviceModeLabel.trailingAnchor.constraint(equalTo: deviceModeSwitch.leadingAnchor, constant: 0).isActive = true
+        deviceModeLabel.centerYAnchor.constraint(equalTo: deviceModeSwitch.centerYAnchor).isActive = true
         
         deviceModeSwitch.translatesAutoresizingMaskIntoConstraints = false
         deviceModeSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
@@ -55,8 +60,10 @@ class SettingsCell: UITableViewCell {
         
         darkModeLabel.translatesAutoresizingMaskIntoConstraints = false
         darkModeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        darkModeLabel.topAnchor.constraint(equalTo: deviceModeLabel.bottomAnchor, constant: 20).isActive = true
+        darkModeLabel.trailingAnchor.constraint(equalTo: darkModeSwitch.leadingAnchor, constant: 0).isActive = true
+        darkModeLabel.centerYAnchor.constraint(equalTo: darkModeSwitch.centerYAnchor).isActive = true
         
+        darkModeSwitch.translatesAutoresizingMaskIntoConstraints = false
         darkModeSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         darkModeSwitch.topAnchor.constraint(equalTo: deviceModeSwitch.bottomAnchor, constant: 20).isActive = true
         darkModeSwitch.leadingAnchor.constraint(equalTo: darkModeLabel.trailingAnchor, constant: 20).isActive = true
