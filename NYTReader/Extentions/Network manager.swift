@@ -11,22 +11,18 @@ import Alamofire
 import SwiftyJSON
 
 // MARK: - Network manager
-extension NewsViewController
-    {
-        func getData(url: String)
-        {
+extension NewsViewController {
+        func getData(url: String) {
             Alamofire.request(url, method: .get).responseJSON { response in
-                if response.result.isSuccess
-                {
+                if response.result.isSuccess {
                     let dataJSON = JSON(response.result.value!)
                     print("Data has downloaded")
                     self.updateData(json: dataJSON)
                 }
-                else
-                {
+                else {
                     print("Error: \(String(describing: response.result.error))")
                     print("Connection problems")
-                }
             }
         }
     }
+}
