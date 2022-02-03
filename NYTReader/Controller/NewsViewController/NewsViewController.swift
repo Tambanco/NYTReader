@@ -32,8 +32,7 @@ class NewsViewController: UIViewController {
         tableNews.register(NewsCell.self, forCellReuseIdentifier: NewsCell.reuseId)
 
         view.addSubview(tableNews)
-        
-        tableNews.backgroundColor = .red
+
         tableNews.dataSource = self
         tableNews.delegate = self
         tableNews.rowHeight = 80
@@ -60,9 +59,9 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.accessoryType = .disclosureIndicator
         cell.newsTitleLabel.text = newsArray[indexPath.row].title
         
-        cell.newsCoverImage.kf.indicatorType = .activity
-        cell.newsCoverImage.kf.setImage(with: URL(string: newsArray[indexPath.row].imageURL), placeholder: UIImage(named: "placeholder"), options: [.transition(.fade(0.2)), .processor(processor)] )
-        cell.newsCoverImage.kf.indicatorType = .activity
+        cell.newsCoverImageView.kf.indicatorType = .activity
+        cell.newsCoverImageView.kf.setImage(with: URL(string: newsArray[indexPath.row].imageURL), placeholder: UIImage(named: "placeholder"), options: [.transition(.fade(0.2)), .processor(processor)] )
+        cell.newsCoverImageView.kf.indicatorType = .activity
         
         return cell
     }

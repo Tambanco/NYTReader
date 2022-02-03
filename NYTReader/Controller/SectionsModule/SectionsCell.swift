@@ -18,7 +18,6 @@ class SectionCell: UITableViewCell {
         let label = UILabel()
         label.text = "Section"
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
-//        label.backgroundColor = .yellow
         return label
     }()
     
@@ -26,7 +25,6 @@ class SectionCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: SectionCell.reuseId)
         
-        // 1 layer
         addSubview(sectionLabel)
         
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false
