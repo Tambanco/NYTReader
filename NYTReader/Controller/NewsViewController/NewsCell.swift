@@ -16,7 +16,6 @@ class NewsCell: UITableViewCell {
     
     let newsCoverImage: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .red
         return image
     }()
     
@@ -24,27 +23,25 @@ class NewsCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont(name: "Hoefler Text", size: 17.0)
         label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 2
-        label.backgroundColor = .blue
+        label.numberOfLines = 3
         return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: NewsCell.reuseId)
         
-        // 1 layer
         addSubview(newsCoverImage)
         addSubview(newsTitleLabel)
         
         newsCoverImage.translatesAutoresizingMaskIntoConstraints = false
         newsCoverImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        newsCoverImage.trailingAnchor.constraint(equalTo: newsTitleLabel.leadingAnchor, constant: -10).isActive = true
-        newsCoverImage.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        newsCoverImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        newsCoverImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        newsCoverImage.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9).isActive = true
+        newsCoverImage.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.15).isActive = true
         
         newsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        newsTitleLabel.leadingAnchor.constraint(equalTo: newsCoverImage.trailingAnchor).isActive = true
-        newsTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        newsTitleLabel.leadingAnchor.constraint(equalTo: newsCoverImage.trailingAnchor, constant: 20).isActive = true
+        newsTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40).isActive = true
         newsTitleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
         newsTitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }

@@ -36,8 +36,9 @@ class NewsViewController: UIViewController {
         tableNews.backgroundColor = .red
         tableNews.dataSource = self
         tableNews.delegate = self
-        tableNews.estimatedRowHeight = 80
-        tableNews.rowHeight = UITableView.automaticDimension
+//        tableNews.estimatedRowHeight = 80
+//        tableNews.rowHeight = UITableView.automaticDimension
+        tableNews.rowHeight = 60
         tableNews.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         
         
@@ -54,9 +55,9 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsArray.count
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return UITableView.automaticDimension
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+//        return UITableView.automaticDimension
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
