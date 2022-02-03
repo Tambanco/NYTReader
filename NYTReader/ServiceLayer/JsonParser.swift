@@ -17,7 +17,7 @@ extension NewsViewController {
             if rawItems.count > 0 {
                 rawItems.forEach({ newsArray.append( Articles(title: $0["title"].string ?? "issues with Title",
                                                               url: $0["url"].string ?? "Issues with url",
-                                                              imageURL: $0["multimedia"][1]["url"].string ?? "Ussues with imageURL") ) })
+                                                              imageURL: $0["multimedia"][0]["url"].string ?? "Ussues with imageURL") ) })
             }
             tableNews.reloadData()
         }

@@ -8,9 +8,12 @@
 
 import UIKit
 
-struct Articles
-{
-    var title:      String
-    var url:        String
-    var imageURL:   String
+struct Articles {
+    let title:      String
+    let url:        String
+    let imageURL:   String
 }
+//
+//struct Multimedia {
+//    let url: String
+//}
