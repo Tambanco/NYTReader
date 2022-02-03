@@ -9,8 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate
-{
+class WebViewController: UIViewController, WKUIDelegate {
     // MARK: - Outlets
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var progressView: UIProgressView!
@@ -19,8 +18,7 @@ class WebViewController: UIViewController, WKUIDelegate
     var passingURL = ""
     
     // MARK: - Life cycle
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         
@@ -29,16 +27,13 @@ class WebViewController: UIViewController, WKUIDelegate
         webView.load(myRequest)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
-    {
-           if keyPath == "estimatedProgress"
-           {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+           if keyPath == "estimatedProgress" {
                progressView.progress = Float(webView.estimatedProgress)
            }
        }
 
-    @IBAction func reloadPage(_ sender: UIBarButtonItem)
-    {
+    @IBAction func reloadPage(_ sender: UIBarButtonItem) {
         webView.reload()
     }
 }
