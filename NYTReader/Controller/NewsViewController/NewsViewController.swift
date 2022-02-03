@@ -53,7 +53,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let processor = RoundCornerImageProcessor(cornerRadius: 10)
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.reuseId, for: indexPath) as! NewsCell
         cell.accessoryType = .disclosureIndicator

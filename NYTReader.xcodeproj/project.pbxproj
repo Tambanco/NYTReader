@@ -20,9 +20,9 @@
 		498D08F227A694BD00B8E83B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D08F127A694BD00B8E83B /* NewsCell.swift */; };
 		49C3DC8727A72540001F3612 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C3DC8627A72540001F3612 /* SettingsCell.swift */; };
 		49F4F719264188150094FF31 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F718264188150094FF31 /* URLs.swift */; };
-		49F4F71D26418A6A0094FF31 /* URL Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F71C26418A6A0094FF31 /* URL Builder.swift */; };
+		49F4F71D26418A6A0094FF31 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F71C26418A6A0094FF31 /* UrlBuilder.swift */; };
 		49F4F72126418A770094FF31 /* Network manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72026418A770094FF31 /* Network manager.swift */; };
-		49F4F72426418A830094FF31 /* JSON Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72326418A830094FF31 /* JSON Parser.swift */; };
+		49F4F72426418A830094FF31 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72326418A830094FF31 /* JsonParser.swift */; };
 		49F4F72726418A900094FF31 /* Refresh controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72626418A900094FF31 /* Refresh controller.swift */; };
 		49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */; };
 		56182AF82445EE790077ACCA /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56182AF72445EE790077ACCA /* Articles.swift */; };
@@ -62,9 +62,9 @@
 		498D08F127A694BD00B8E83B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		49C3DC8627A72540001F3612 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		49F4F718264188150094FF31 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
-		49F4F71C26418A6A0094FF31 /* URL Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL Builder.swift"; sourceTree = "<group>"; };
+		49F4F71C26418A6A0094FF31 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		49F4F72026418A770094FF31 /* Network manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network manager.swift"; sourceTree = "<group>"; };
-		49F4F72326418A830094FF31 /* JSON Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON Parser.swift"; sourceTree = "<group>"; };
+		49F4F72326418A830094FF31 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		49F4F72626418A900094FF31 /* Refresh controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Refresh controller.swift"; sourceTree = "<group>"; };
 		49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		56182AF72445EE790077ACCA /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -159,9 +159,9 @@
 		49F4F717264187730094FF31 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				49F4F71C26418A6A0094FF31 /* URL Builder.swift */,
+				49F4F71C26418A6A0094FF31 /* UrlBuilder.swift */,
 				49F4F72026418A770094FF31 /* Network manager.swift */,
-				49F4F72326418A830094FF31 /* JSON Parser.swift */,
+				49F4F72326418A830094FF31 /* JsonParser.swift */,
 				49F4F72626418A900094FF31 /* Refresh controller.swift */,
 			);
 			path = Extentions;
@@ -422,14 +422,14 @@
 				56B8A410244349FB00D015E4 /* AppDelegate.swift in Sources */,
 				56B8A412244349FB00D015E4 /* SceneDelegate.swift in Sources */,
 				498D08EA27A65E3C00B8E83B /* SectionsCell.swift in Sources */,
-				49F4F72426418A830094FF31 /* JSON Parser.swift in Sources */,
+				49F4F72426418A830094FF31 /* JsonParser.swift in Sources */,
 				49F4F719264188150094FF31 /* URLs.swift in Sources */,
 				56BBAA76244372BF00407140 /* WebViewController.swift in Sources */,
 				56182AF82445EE790077ACCA /* Articles.swift in Sources */,
 				49F4F72126418A770094FF31 /* Network manager.swift in Sources */,
 				49F4F72B26419BEB0094FF31 /* SettingsTableViewController.swift in Sources */,
 				498D08F227A694BD00B8E83B /* NewsCell.swift in Sources */,
-				49F4F71D26418A6A0094FF31 /* URL Builder.swift in Sources */,
+				49F4F71D26418A6A0094FF31 /* UrlBuilder.swift in Sources */,
 				49F4F72726418A900094FF31 /* Refresh controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
