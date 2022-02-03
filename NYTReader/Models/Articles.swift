@@ -13,7 +13,3 @@ struct Articles {
     let url:        String
     let imageURL:   String
 }
-//
-//struct Multimedia {
-//    let url: String
-//}
