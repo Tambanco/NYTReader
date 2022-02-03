@@ -130,33 +130,33 @@
 			path = SectionsModule;
 			sourceTree = "<group>";
 		};
-		498D08EC27A65FE700B8E83B /* NewsViewController */ = {
+		498D08EC27A65FE700B8E83B /* NewModule */ = {
 			isa = PBXGroup;
 			children = (
 				56B8A413244349FB00D015E4 /* NewsViewController.swift */,
 				498D08F127A694BD00B8E83B /* NewsCell.swift */,
 			);
-			path = NewsViewController;
+			path = NewModule;
 			sourceTree = "<group>";
 		};
-		498D08ED27A65FEE00B8E83B /* WebViewController */ = {
+		498D08ED27A65FEE00B8E83B /* WebViewModule */ = {
 			isa = PBXGroup;
 			children = (
 				56BBAA75244372BF00407140 /* WebViewController.swift */,
 			);
-			path = WebViewController;
+			path = WebViewModule;
 			sourceTree = "<group>";
 		};
-		498D08EE27A65FF600B8E83B /* SettingsTableViewController */ = {
+		498D08EE27A65FF600B8E83B /* SettingsModule */ = {
 			isa = PBXGroup;
 			children = (
 				49F4F72A26419BEB0094FF31 /* SettingsTableViewController.swift */,
 				49C3DC8627A72540001F3612 /* SettingsCell.swift */,
 			);
-			path = SettingsTableViewController;
+			path = SettingsModule;
 			sourceTree = "<group>";
 		};
-		49F4F717264187730094FF31 /* Extentions */ = {
+		49F4F717264187730094FF31 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
 				49F4F71C26418A6A0094FF31 /* UrlBuilder.swift */,
@@ -164,7 +164,7 @@
 				49F4F72326418A830094FF31 /* JsonParser.swift */,
 				49F4F72626418A900094FF31 /* Refresh controller.swift */,
 			);
-			path = Extentions;
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 		4AD3A3920DAA576247E7C5A9 /* Frameworks */ = {
@@ -203,7 +203,7 @@
 				56BBAA782443ABC500407140 /* Models */,
 				56BBAA792443ABD600407140 /* View */,
 				56BBAA772443ABAD00407140 /* Controller */,
-				49F4F717264187730094FF31 /* Extentions */,
+				49F4F717264187730094FF31 /* ServiceLayer */,
 				56BBAA7A2443AC4500407140 /* Supported files */,
 				56B8A41D24434A0000D015E4 /* Info.plist */,
 			);
@@ -214,9 +214,9 @@
 			isa = PBXGroup;
 			children = (
 				498D08EB27A65FD000B8E83B /* SectionsModule */,
-				498D08EC27A65FE700B8E83B /* NewsViewController */,
-				498D08ED27A65FEE00B8E83B /* WebViewController */,
-				498D08EE27A65FF600B8E83B /* SettingsTableViewController */,
+				498D08EC27A65FE700B8E83B /* NewModule */,
+				498D08ED27A65FEE00B8E83B /* WebViewModule */,
+				498D08EE27A65FF600B8E83B /* SettingsModule */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
