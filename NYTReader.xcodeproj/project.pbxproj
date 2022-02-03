@@ -200,10 +200,10 @@
 			children = (
 				56B8A40F244349FB00D015E4 /* AppDelegate.swift */,
 				56B8A411244349FB00D015E4 /* SceneDelegate.swift */,
+				49F4F717264187730094FF31 /* ServiceLayer */,
 				56BBAA782443ABC500407140 /* Models */,
 				56BBAA792443ABD600407140 /* View */,
 				56BBAA772443ABAD00407140 /* Controller */,
-				49F4F717264187730094FF31 /* ServiceLayer */,
 				56BBAA7A2443AC4500407140 /* Supported files */,
 				56B8A41D24434A0000D015E4 /* Info.plist */,
 			);

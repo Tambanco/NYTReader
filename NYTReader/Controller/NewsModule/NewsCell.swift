@@ -16,6 +16,8 @@ class NewsCell: UITableViewCell {
     
     let newsCoverImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -37,7 +39,7 @@ class NewsCell: UITableViewCell {
         newsCoverImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         newsCoverImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         newsCoverImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.9).isActive = true
-        newsCoverImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.15).isActive = true
+        newsCoverImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.25).isActive = true
         
         newsTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         newsTitleLabel.leadingAnchor.constraint(equalTo: newsCoverImageView.trailingAnchor, constant: 20).isActive = true

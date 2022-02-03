@@ -53,7 +53,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let processor = RoundCornerImageProcessor(cornerRadius: 10)
+        let processor = RoundCornerImageProcessor(cornerRadius: 20)
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsCell.reuseId, for: indexPath) as! NewsCell
         cell.accessoryType = .disclosureIndicator
         cell.newsTitleLabel.text = newsArray[indexPath.row].title
@@ -77,11 +77,3 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-
-
-
-
-
-
-
-
