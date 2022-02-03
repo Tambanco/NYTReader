@@ -36,11 +36,8 @@ class NewsViewController: UIViewController {
         tableNews.backgroundColor = .red
         tableNews.dataSource = self
         tableNews.delegate = self
-//        tableNews.estimatedRowHeight = 80
-//        tableNews.rowHeight = UITableView.automaticDimension
-        tableNews.rowHeight = 60
+        tableNews.rowHeight = 80
         tableNews.refreshControl?.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
-        
         
         tableNews.translatesAutoresizingMaskIntoConstraints = false
         tableNews.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
@@ -55,9 +52,6 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsArray.count
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-//        return UITableView.automaticDimension
-//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -67,9 +61,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         cell.newsTitleLabel.text = newsArray[indexPath.row].title
         
         cell.newsCoverImage.kf.indicatorType = .activity
-        cell.newsCoverImage.kf.setImage(with: URL(string: newsArray[indexPath.row].imageURL),
-                                        placeholder: UIImage(named: "placeholder"),
-                                        options: [.transition(.fade(0.2)), .processor(processor)] )
+        cell.newsCoverImage.kf.setImage(with: URL(string: newsArray[indexPath.row].imageURL), placeholder: UIImage(named: "placeholder"), options: [.transition(.fade(0.2)), .processor(processor)] )
         cell.newsCoverImage.kf.indicatorType = .activity
         
         return cell
