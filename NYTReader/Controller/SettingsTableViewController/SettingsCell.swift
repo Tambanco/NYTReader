@@ -52,22 +52,22 @@ class SettingsCell: UITableViewCell {
         addSubview(darkModeLabel)
         addSubview(darkModeSwitch)
         
-        // constraints
+        //constraints
         deviceModeLabel.translatesAutoresizingMaskIntoConstraints = false
         deviceModeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         deviceModeLabel.trailingAnchor.constraint(equalTo: deviceModeSwitch.leadingAnchor, constant: 0).isActive = true
         deviceModeLabel.centerYAnchor.constraint(equalTo: deviceModeSwitch.centerYAnchor).isActive = true
-        
+
         deviceModeSwitch.translatesAutoresizingMaskIntoConstraints = false
         deviceModeSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         deviceModeSwitch.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         deviceModeSwitch.leadingAnchor.constraint(equalTo: deviceModeLabel.trailingAnchor, constant: -20).isActive = true
-        
+
         darkModeLabel.translatesAutoresizingMaskIntoConstraints = false
         darkModeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         darkModeLabel.trailingAnchor.constraint(equalTo: darkModeSwitch.leadingAnchor, constant: 0).isActive = true
         darkModeLabel.centerYAnchor.constraint(equalTo: darkModeSwitch.centerYAnchor).isActive = true
-        
+
         darkModeSwitch.translatesAutoresizingMaskIntoConstraints = false
         darkModeSwitch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         darkModeSwitch.topAnchor.constraint(equalTo: deviceModeSwitch.bottomAnchor, constant: 20).isActive = true

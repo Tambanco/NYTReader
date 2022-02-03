@@ -22,6 +22,7 @@ class SettingsTableViewController: UIViewController {
     func tableSettingsInitializer() {
         tableSettings = UITableView()
         tableSettings.register(SettingsCell.self, forCellReuseIdentifier: SettingsCell.reuseId)
+        
         self.view.addSubview(tableSettings)
         
         tableSettings.separatorStyle = .none

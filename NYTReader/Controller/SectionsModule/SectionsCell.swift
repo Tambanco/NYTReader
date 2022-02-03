@@ -24,9 +24,9 @@ class SectionCell: UITableViewCell {
     // initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: SectionCell.reuseId)
-        
+        exerciseAmbiguityInLayout()
         addSubview(sectionLabel)
-
+        
         sectionLabel.translatesAutoresizingMaskIntoConstraints = false
         sectionLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         sectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
