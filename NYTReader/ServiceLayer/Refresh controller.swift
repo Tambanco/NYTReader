@@ -9,11 +9,9 @@
 import Foundation
 
 // MARK: - Refresh controller
-extension NewsViewController
-{
-    @objc func refresh(sender:AnyObject)
-    {
+extension NewsViewController {
+    @objc func refresh(sender:AnyObject) {
         getData(url: basicURL)
-        self.refreshControl?.endRefreshing()
+        tableNews.refreshControl?.endRefreshing()
     }
 }

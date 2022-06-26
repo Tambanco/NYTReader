@@ -15,6 +15,6 @@ extension NewsViewController
     {
         let urlForRequest = basicURL + section + ".json?" + "api-key=" + apiKey
         getData(url: urlForRequest)
-        self.refreshControl?.endRefreshing()
+        tableNews.refreshControl?.endRefreshing()
     }
 }

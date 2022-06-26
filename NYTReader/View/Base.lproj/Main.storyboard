@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NZs-kc-KO2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NZs-kc-KO2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,31 +13,9 @@
         <scene sceneID="clm-fT-I9s">
             <objects>
                 <tableViewController storyboardIdentifier="SectionsViewController" id="4S9-S7-nCe" customClass="SectionsViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="45r-VQ-BoC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sectionsCell" id="JZp-Yg-b6t" customClass="SectionsTableViewCell" customModule="NYTReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZp-Yg-b6t" id="bly-Xg-yGz">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="nfV-RT-Tky" kind="show" identifier="goToArticles" id="g7p-oV-Hm3"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4S9-S7-nCe" id="KG9-uv-Eq4"/>
-                            <outlet property="delegate" destination="4S9-S7-nCe" id="ChR-fY-3IY"/>
-                        </connections>
-                    </tableView>
                     <tabBarItem key="tabBarItem" title="Sections" image="books.vertical" catalog="system" id="mIn-1B-S48"/>
                     <connections>
-                        <outlet property="tableSections" destination="45r-VQ-BoC" id="sn4-eF-7rI"/>
+                        <segue destination="nfV-RT-Tky" kind="show" identifier="goToArticles" id="6Su-jm-APJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2DL-rd-ihP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -47,29 +26,7 @@
         <scene sceneID="pcE-9o-VpL">
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" id="pqu-9T-3T8" customClass="SettingsTableViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MTL-xc-7xW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="Kzi-tu-6nI" customClass="SettingsTableViewCell" customModule="NYTReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kzi-tu-6nI" id="dOt-IF-JNV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pqu-9T-3T8" id="TOl-JL-6cv"/>
-                            <outlet property="delegate" destination="pqu-9T-3T8" id="cVl-du-uGp"/>
-                        </connections>
-                    </tableView>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="8z3-8x-Zzn"/>
-                    <connections>
-                        <outlet property="tableSettings" destination="MTL-xc-7xW" id="a94-bp-WFQ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQm-bj-7c6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,28 +36,6 @@
         <scene sceneID="Y0c-ol-CuU">
             <objects>
                 <tableViewController storyboardIdentifier="NewsViewController" clearsSelectionOnViewWillAppear="NO" id="nfV-RT-Tky" customClass="NewsViewController" customModule="NYTReader" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gzQ-n6-qgH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="top" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellWithNews" id="r3e-pq-qgt">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3e-pq-qgt" id="8A0-Do-YDV">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="xKR-dh-JRm" kind="show" identifier="goToWebVersion" id="ftM-kh-VSH"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nfV-RT-Tky" id="xzA-au-wNZ"/>
-                            <outlet property="delegate" destination="nfV-RT-Tky" id="wNH-2a-xoC"/>
-                        </connections>
-                    </tableView>
                     <tabBarItem key="tabBarItem" title="Article" image="book" catalog="system" id="T54-RA-SGH"/>
                     <navigationItem key="navigationItem" id="piD-ut-NNE">
                         <barButtonItem key="backBarButtonItem" title="Articles" id="p8X-er-3bk"/>
@@ -119,7 +54,7 @@
                         </attributedString>
                     </refreshControl>
                     <connections>
-                        <outlet property="tableNews" destination="gzQ-n6-qgH" id="XC2-2D-EL4"/>
+                        <segue destination="xKR-dh-JRm" kind="show" identifier="goToWebVersion" id="MMC-iM-koA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdJ-cP-z9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,8 +155,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="102"/>
-        <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
